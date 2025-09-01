@@ -1,70 +1,15 @@
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import project1Image from "@/assets/placeholder.jpg";
-import project2Image from "@/assets/placeholder.jpg";
-import project3Image from "@/assets/placeholder.jpg";
+import { projects } from "@/data/portfolio";
 
-const Projects = () => {
-  const projects = [
-    {
-      title: "MANSCAPED Shopify Plus Transformation",
-      category: "DTC E-commerce Platform",
-      image: project2Image,
-      description: "Led full-scale digital transformation of unicorn DTC brand's e-commerce platform, managing cross-functional team of 25+ through peak traffic periods.",
-      challenge: "MANSCAPED needed to scale their Shopify Plus integration while maintaining platform stability during high-traffic events like Black Friday Cyber Monday.",
-      solution: "Spearheaded development of modern CMS, DAM, payment infrastructure, and design system while maintaining feature continuity through traffic spikes.",
-      impact: [
-        "30% increase in platform reliability",
-        "Seamless BFCM traffic handling",
-        "$1.5M vendor partnerships managed",
-        "Accelerated time-to-market delivery"
-      ],
-      technologies: ["Shopify Plus", "Modern CMS", "DAM", "Payment Systems"],
-      timeline: "18 months",
-      team: "25+ people"
-    },
-    {
-      title: "Powersports Industry-First eCommerce Checkout",
-      category: "Marketplace Innovation",
-      image: project3Image,
-      description: "Launched the powersports industry's first end-to-end eCommerce checkout solution, revolutionizing how dealers and customers transact online.",
-      challenge: "The powersports industry lacked digital purchase capabilities, forcing customers to complete transactions offline and limiting dealer reach.",
-      solution: "Built comprehensive checkout with digital purchase agreements, trade-in valuation, financing, direct payments, and 50-state DMV titling integration.",
-      impact: [
-        "$150M+ annual revenue unlocked",
-        "Industry-first digital capabilities",
-        "$100K/month monetization increase",
-        "13.5M+ monthly visitors served"
-      ],
-      technologies: ["Digital Payments", "DMV Integration", "Fintech APIs", "Trade-in Systems"],
-      timeline: "12 months",
-      team: "15 people"
-    },
-    {
-      title: "Arc XP AI/ML Personalization Platform",
-      category: "Media Technology Platform",
-      image: project1Image,
-      description: "Deployed AI/ML-powered recommendation and personalization models across Arc XP's global publisher network, transforming content delivery for media brands.",
-      challenge: "Media publishers needed better user engagement and personalized content delivery to compete in the digital landscape.",
-      solution: "Implemented vertical-specific demos and AI/ML personalization models aligned with OKRs and ideal customer profiles for different market segments.",
-      impact: [
-        "17% increase in qualified leads",
-        "3% YoY customer acquisition lift",
-        "Enhanced user engagement globally",
-        "Multi-vertical market expansion"
-      ],
-      technologies: ["AI/ML Models", "Personalization Engines", "Publisher APIs", "Analytics"],
-      timeline: "20 months",
-      team: "12 people"
-    }
-  ];
-
+const Projects: React.FC = React.memo(() => {
   return (
-    <section id="projects" className="section-spacing bg-background">
+    <section id="projects" className="section-spacing bg-background" aria-labelledby="projects-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 id="projects-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -82,8 +27,9 @@ const Projects = () => {
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-64 lg:h-full object-cover"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" aria-hidden="true" />
                 </div>
                 
                 {/* Content */}
@@ -116,7 +62,7 @@ const Projects = () => {
                         <div className="grid sm:grid-cols-2 gap-2">
                           {project.impact.map((item, impactIndex) => (
                             <div key={impactIndex} className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-success rounded-full flex-shrink-0" />
+                              <div className="w-2 h-2 bg-success rounded-full flex-shrink-0" aria-hidden="true" />
                               <span className="text-muted-foreground text-sm">{item}</span>
                             </div>
                           ))}
@@ -156,6 +102,8 @@ const Projects = () => {
       </div>
     </section>
   );
-};
+});
+
+Projects.displayName = 'Projects';
 
 export default Projects;
