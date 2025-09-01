@@ -1,42 +1,16 @@
+import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { contactMethods, availableFor } from "@/data/portfolio";
+import { openExternalLink } from "@/lib/utils";
 
-const Contact = () => {
-  const contactMethods = [
-    {
-      type: "Email",
-      value: "matt.nash@productleader.dev",
-      action: "mailto:matt.nash@productleader.dev",
-      description: "Best for detailed discussions and project inquiries"
-    },
-    {
-      type: "LinkedIn",
-      value: "/in/mattnashproduct",
-      action: "https://linkedin.com/in/mattnashproduct",
-      description: "Let's connect and discuss opportunities"
-    },
-    {
-      type: "Schedule Call",
-      value: "30-min consultation",
-      action: "https://calendly.com/mattnash",
-      description: "Book a time that works for both of us"
-    }
-  ];
-
-  const availableFor = [
-    "Senior Product Leadership Roles",
-    "Digital Transformation Consulting",
-    "E-commerce & Marketplace Strategy",
-    "AI/ML Product Implementation",
-    "Speaking Engagements",
-    "Board Advisory Positions"
-  ];
+const Contact: React.FC = React.memo(() => {
 
   return (
-    <section id="contact" className="section-spacing gradient-subtle">
+    <section id="contact" className="section-spacing gradient-subtle" aria-labelledby="contact-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 id="contact-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Let's Work Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -56,17 +30,18 @@ const Contact = () => {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
-                        <div className="w-6 h-6 bg-primary rounded-full"></div>
+                        <div className="w-6 h-6 bg-primary rounded-full" aria-hidden="true"></div>
                       </div>
                       <div className="flex-1">
                         <h4 className="font-semibold text-foreground mb-1">{method.type}</h4>
                         <p className="text-primary font-medium mb-2">{method.value}</p>
                         <p className="text-muted-foreground text-sm mb-4">{method.description}</p>
                         <Button 
-                          onClick={() => window.open(method.action, '_blank')}
+                          onClick={() => openExternalLink(method.action)}
                           variant="outline" 
                           size="sm"
                           className="text-primary border-primary hover:bg-primary hover:text-primary-foreground"
+                          aria-label={`Connect via ${method.type}`}
                         >
                           Connect
                         </Button>
@@ -88,7 +63,7 @@ const Contact = () => {
                 <div className="space-y-4">
                   {availableFor.map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-success rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-success rounded-full flex-shrink-0" aria-hidden="true"></div>
                       <span className="text-foreground">{item}</span>
                     </div>
                   ))}
@@ -103,7 +78,7 @@ const Contact = () => {
                     Currently exploring senior product leadership roles and consulting projects.
                   </p>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-success rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-success rounded-full animate-pulse" aria-hidden="true"></div>
                     <span className="text-success font-medium">Available for new projects</span>
                   </div>
                 </div>
@@ -125,15 +100,17 @@ const Contact = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  onClick={() => window.open('mailto:matt.nash@productleader.dev', '_blank')}
+                  onClick={() => openExternalLink('mailto:matt.nash@productleader.dev')}
                   className="btn-primary"
+                  aria-label="Send email to matt.nash@productleader.dev"
                 >
                   Send Email
                 </Button>
                 <Button 
-                  onClick={() => window.open('https://calendly.com/mattnash', '_blank')}
+                  onClick={() => openExternalLink('https://calendly.com/mattnash')}
                   variant="outline"
                   className="btn-outline"
+                  aria-label="Schedule a call via Calendly"
                 >
                   Schedule Call
                 </Button>
@@ -144,6 +121,8 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
+
+Contact.displayName = 'Contact';
 
 export default Contact;

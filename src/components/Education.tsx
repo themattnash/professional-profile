@@ -1,25 +1,13 @@
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { education, certifications } from "@/data/portfolio";
 
-const Education = () => {
-  const education = {
-    degree: "B.S. Social Sciences",
-    school: "James Madison University",
-    year: "2006",
-    description: "Foundation in social sciences providing strong analytical and research skills that inform user-centered product development."
-  };
-
-  const certifications = [
-    "Product Management Certification - General Assembly",
-    "Agile Product Management - Scrum Alliance",
-    "Google Analytics Individual Qualification",
-    "AWS Cloud Practitioner"
-  ];
-
+const Education: React.FC = React.memo(() => {
   return (
-    <section id="education" className="section-spacing bg-background">
+    <section id="education" className="section-spacing bg-background" aria-labelledby="education-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 id="education-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Education & Continuous Learning
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -58,7 +46,7 @@ const Education = () => {
                 <div className="space-y-3">
                   {certifications.map((cert, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
                       <span className="text-foreground">{cert}</span>
                     </div>
                   ))}
@@ -70,6 +58,8 @@ const Education = () => {
       </div>
     </section>
   );
-};
+});
+
+Education.displayName = 'Education';
 
 export default Education;
