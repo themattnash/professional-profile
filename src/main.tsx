@@ -4,6 +4,17 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 
+// Debug helpers (safe in prod)
+if (typeof window !== 'undefined') {
+  window.addEventListener('error', (e) => {
+    console.error('GlobalError:', e.error || e.message)
+  })
+  window.addEventListener('unhandledrejection', (e) => {
+    console.error('UnhandledRejection:', e.reason)
+  })
+}
+
+
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Root element not found');
 

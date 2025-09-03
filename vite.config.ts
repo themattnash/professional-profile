@@ -10,5 +10,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  build: {
+    sourcemap: true, // 👈 add this for readable stack traces in production
+  },
 })
-
