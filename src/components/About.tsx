@@ -6,7 +6,16 @@ const About: React.FC = React.memo(() => {
   return (
     <section id="about" className="section-spacing gradient-subtle" aria-labelledby="about-heading">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="text-center mb-16">
+          <h2 id="about-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            About Me
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Digital product leader with 15+ years of experience building impactful, scalable solutions.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h3 className="text-2xl font-semibold text-foreground mb-6">
               Digital Product Leadership
@@ -39,7 +48,7 @@ const About: React.FC = React.memo(() => {
         </div>
 
         <div className="bg-card rounded-2xl p-8 lg:p-12 shadow-elegant">
-          <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">
+          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
             Core Philosophy
           </h3>
           <div className="grid md:grid-cols-3 gap-8">

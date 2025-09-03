@@ -1,8 +1,5 @@
-import { Experience, Project, SkillCategory, Methodology, ContactMethod, Highlight, Education } from '@/types';
+import { Experience, SkillCategory, Methodology, ContactMethod, Highlight, Education } from '@/types';
 import heroImage from '@/assets/hero-workspace.jpg';
-import project1Image from '@/assets/placeholder.jpg';
-import project2Image from '@/assets/placeholder.jpg';
-import project3Image from '@/assets/project3-ecommerce.jpg';
 
 export const heroData = {
   name: 'Matt Nash',
@@ -103,59 +100,59 @@ export const experiences: Experience[] = [
   }
 ];
 
-export const projects: Project[] = [
-  {
-    title: "MANSCAPED Shopify Plus Transformation",
-    category: "DTC E-commerce Platform",
-    image: project2Image,
-    description: "Led full-scale digital transformation of unicorn DTC brand's e-commerce platform, managing cross-functional team of 25+ through peak traffic periods.",
-    challenge: "MANSCAPED needed to scale their Shopify Plus integration while maintaining platform stability during high-traffic events like Black Friday Cyber Monday.",
-    solution: "Spearheaded development of modern CMS, DAM, payment infrastructure, and design system while maintaining feature continuity through traffic spikes.",
-    impact: [
-      "30% increase in platform reliability",
-      "Seamless BFCM traffic handling",
-      "$1.5M vendor partnerships managed",
-      "Accelerated time-to-market delivery"
-    ],
-    technologies: ["Shopify Plus", "Modern CMS", "DAM", "Payment Systems"],
-    timeline: "18 months",
-    team: "25+ people"
-  },
-  {
-    title: "Powersports Industry-First eCommerce Checkout",
-    category: "Marketplace Innovation",
-    image: project3Image,
-    description: "Launched the powersports industry's first end-to-end eCommerce checkout solution, revolutionizing how dealers and customers transact online.",
-    challenge: "The powersports industry lacked digital purchase capabilities, forcing customers to complete transactions offline and limiting dealer reach.",
-    solution: "Built comprehensive checkout with digital purchase agreements, trade-in valuation, financing, direct payments, and 50-state DMV titling integration.",
-    impact: [
-      "$150M+ annual revenue unlocked",
-      "Industry-first digital capabilities",
-      "$100K/month monetization increase",
-      "13.5M+ monthly visitors served"
-    ],
-    technologies: ["Digital Payments", "DMV Integration", "Fintech APIs", "Trade-in Systems"],
-    timeline: "12 months",
-    team: "15 people"
-  },
-  {
-    title: "Arc XP AI/ML Personalization Platform",
-    category: "Media Technology Platform",
-    image: project1Image,
-    description: "Deployed AI/ML-powered recommendation and personalization models across Arc XP's global publisher network, transforming content delivery for media brands.",
-    challenge: "Media publishers needed better user engagement and personalized content delivery to compete in the digital landscape.",
-    solution: "Implemented vertical-specific demos and AI/ML personalization models aligned with OKRs and ideal customer profiles for different market segments.",
-    impact: [
-      "17% increase in qualified leads",
-      "3% YoY customer acquisition lift",
-      "Enhanced user engagement globally",
-      "Multi-vertical market expansion"
-    ],
-    technologies: ["AI/ML Models", "Personalization Engines", "Publisher APIs", "Analytics"],
-    timeline: "20 months",
-    team: "12 people"
-  }
-];
+// export const projects: Project[] = [
+//   {
+//     title: "MANSCAPED Shopify Plus Transformation",
+//     category: "DTC E-commerce Platform",
+//     image: project2Image,
+//     description: "Led full-scale digital transformation of unicorn DTC brand's e-commerce platform, managing cross-functional team of 25+ through peak traffic periods.",
+//     challenge: "MANSCAPED needed to scale their Shopify Plus integration while maintaining platform stability during high-traffic events like Black Friday Cyber Monday.",
+//     solution: "Spearheaded development of modern CMS, DAM, payment infrastructure, and design system while maintaining feature continuity through traffic spikes.",
+//     impact: [
+//       "30% increase in platform reliability",
+//       "Seamless BFCM traffic handling",
+//       "$1.5M vendor partnerships managed",
+//       "Accelerated time-to-market delivery"
+//     ],
+//     technologies: ["Shopify Plus", "Modern CMS", "DAM", "Payment Systems"],
+//     timeline: "18 months",
+//     team: "25+ people"
+//   },
+//   {
+//     title: "Powersports Industry-First eCommerce Checkout",
+//     category: "Marketplace Innovation",
+//     image: project3Image,
+//     description: "Launched the powersports industry's first end-to-end eCommerce checkout solution, revolutionizing how dealers and customers transact online.",
+//     challenge: "The powersports industry lacked digital purchase capabilities, forcing customers to complete transactions offline and limiting dealer reach.",
+//     solution: "Built comprehensive checkout with digital purchase agreements, trade-in valuation, financing, direct payments, and 50-state DMV titling integration.",
+//     impact: [
+//       "$150M+ annual revenue unlocked",
+//       "Industry-first digital capabilities",
+//       "$100K/month monetization increase",
+//       "13.5M+ monthly visitors served"
+//     ],
+//     technologies: ["Digital Payments", "DMV Integration", "Fintech APIs", "Trade-in Systems"],
+//     timeline: "12 months",
+//     team: "15 people"
+//     },
+//   {
+//     title: "Arc XP AI/ML Personalization Platform",
+//     category: "Media Technology Platform",
+//     image: project1Image,
+//     description: "Deployed AI/ML-powered recommendation and personalization models across Arc XP's global publisher network, transforming content delivery for media brands.",
+//     challenge: "Media publishers needed better user engagement and personalized content delivery to compete in the digital landscape.",
+//     solution: "Implemented vertical-specific demos and AI/ML personalization models aligned with OKRs and ideal customer profiles for different market segments.",
+//     impact: [
+//       "17% increase in qualified leads",
+//       "3% YoY customer acquisition lift",
+//       "Enhanced user engagement globally",
+//       "Multi-vertical market expansion"
+//     ],
+//     technologies: ["AI/ML Models", "Personalization Engines", "Publisher APIs", "Analytics"],
+//     timeline: "20 months",
+//     team: "12 people"
+//   }
+// ];
 
 export const skillCategories: SkillCategory[] = [
   {
@@ -198,38 +195,38 @@ export const skillCategories: SkillCategory[] = [
 
 export const methodologies: Methodology[] = [
   {
-    name: "Outcome-Driven Strategy",
-    description: "OKR framework for aligning product initiatives with business objectives"
+    name: "Outcome Operating System",
+    description: "OKR-driven framework linking North Star metrics to input levers and roadmap priorities."
   },
   {
-    name: "Growth Loops",
-    description: "Data-driven growth strategies and user acquisition optimization"
+    name: "Continuous Discovery Practices",
+    description: "Ongoing customer research using Opportunity Solution Trees to guide evidence-based decisions."
   },
   {
-    name: "AI/ML Applications",
-    description: "Leveraging artificial intelligence for personalization and recommendations"
+    name: "Guardrailed Experimentation",
+    description: "AB testing and rapid iteration with built-in safety metrics, stop rules, and governance."
   },
   {
-    name: "Digital Experience Strategy",
-    description: "End-to-end customer journey optimization across all touchpoints"
+    name: "Compounding Growth Loops",
+    description: "Self-reinforcing acquisition and retention strategies that scale more durably than funnels."
   },
   {
-    name: "Internationalization & Localization",
-    description: "Global product strategy and market adaptation frameworks"
+    name: "Platform & API Product System",
+    description: "API-first design with productized governance, developer experience, and scalable integrations."
   },
   {
-    name: "API-First Product Development",
-    description: "Technical architecture strategy for scalable, integrable solutions"
+    name: "AI Product Reliability & Safety",
+    description: "Evaluation harnesses, human-in-the-loop reviews, and red-teaming to launch trustworthy AI features."
   }
 ];
 
 export const contactMethods: ContactMethod[] = [
-  {
-    type: "Email",
-    value: "matt.nash@productleader.dev",
-    action: "mailto:matt.nash@productleader.dev",
-    description: "Best for detailed discussions and project inquiries"
-  },
+  // {
+  //   type: "Email",
+  //   value: "matt.nash@productleader.dev",
+  //   action: "mailto:matt.nash@productleader.dev",
+  //   description: "Best for detailed discussions and project inquiries"
+  // },
   {
     type: "LinkedIn",
     value: "/in/mattnashproduct",

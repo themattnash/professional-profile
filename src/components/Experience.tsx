@@ -19,7 +19,7 @@ const Experience: React.FC = React.memo(() => {
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <Card key={index} className="shadow-elegant transition-smooth hover:shadow-primary hover:-translate-y-1">
-              <CardHeader>
+              <CardHeader className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div>
                     <CardTitle className="text-2xl text-foreground mb-2">
@@ -37,7 +37,7 @@ const Experience: React.FC = React.memo(() => {
                 </div>
               </CardHeader>
               
-              <CardContent>
+              <CardContent className="p-8 pt-0">
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {exp.description}
                 </p>
