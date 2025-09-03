@@ -9,7 +9,7 @@ const Footer = () => {
 						© {currentYear}, Matt Nash. All rights reserved.
 					</p>
 					<div className="flex gap-6 text-background/60">
-						<span>&#127757; Built by Earthlings</span>
+						<span>&#127757; Built by Earthling</span>
 					</div>
 				</div>
 			</div>
