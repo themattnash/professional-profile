@@ -3,3 +3,11 @@ node_modules/
 dist/
 build/
 .DS_Store
+dist/
+node_modules/
+.DS_Store
+.cache/
+dist/
+node_modules/
+.DS_Store
+.cache/
