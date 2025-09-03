@@ -20,10 +20,10 @@ const Skills: React.FC = React.memo(() => {
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <Card key={index} className="shadow-elegant">
-              <CardHeader>
+              <CardHeader className="p-8">
                 <CardTitle className="text-xl text-foreground">{category.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-8 pt-0">
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex}>

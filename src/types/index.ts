@@ -8,19 +8,6 @@ export interface Experience {
   skills: string[];
 }
 
-export interface Project {
-  title: string;
-  category: string;
-  image: string;
-  description: string;
-  challenge: string;
-  solution: string;
-  impact: string[];
-  technologies: string[];
-  timeline: string;
-  team: string;
-}
-
 export interface Skill {
   name: string;
   level: number;

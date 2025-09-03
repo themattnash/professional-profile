@@ -18,7 +18,7 @@ const Contact: React.FC = React.memo(() => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Contact Methods */}
           <div>
             <h3 className="text-2xl font-semibold text-foreground mb-8">
@@ -88,7 +88,7 @@ const Contact: React.FC = React.memo(() => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <Card className="bg-card shadow-elegant max-w-2xl mx-auto">
             <CardContent className="p-8 lg:p-12">
               <h3 className="text-2xl font-semibold text-foreground mb-4">
@@ -117,7 +117,7 @@ const Contact: React.FC = React.memo(() => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </section>
   );

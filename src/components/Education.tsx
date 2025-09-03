@@ -15,13 +15,13 @@ const Education: React.FC = React.memo(() => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Education */}
           <Card className="shadow-elegant">
-            <CardHeader>
+            <CardHeader className="p-8">
               <CardTitle className="text-2xl text-foreground">Formal Education</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-8 pt-0">
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{education.degree}</h3>
@@ -35,10 +35,10 @@ const Education: React.FC = React.memo(() => {
 
           {/* Certifications */}
           <Card className="shadow-elegant">
-            <CardHeader>
+            <CardHeader className="p-8">
               <CardTitle className="text-2xl text-foreground">Professional Development</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-8 pt-0">
               <div className="space-y-4">
                 <p className="text-muted-foreground mb-6">
                   Committed to continuous learning and staying current with evolving product management practices and technologies.

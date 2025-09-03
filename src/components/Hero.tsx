@@ -1,11 +1,7 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
 import { heroData } from "@/data/portfolio";
-import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const Hero: React.FC = React.memo(() => {
-  const { scrollToSection } = useSmoothScroll();
-
   return (
     <section 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
@@ -28,23 +24,6 @@ const Hero: React.FC = React.memo(() => {
           <p className="text-xl lg:text-2xl font-light mb-8 opacity-90 animate-fade-in [animation-delay:200ms]">
             {heroData.title}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in [animation-delay:600ms]">
-            <Button 
-              onClick={() => scrollToSection('projects')}
-              className="btn-primary text-lg px-8 py-4"
-              aria-label="View my work projects"
-            >
-              View My Work
-            </Button>
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              variant="outline"
-              className="btn-outline text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary"
-              aria-label="Get in touch contact form"
-            >
-              Get In Touch
-            </Button>
-          </div>
         </div>
       </div>
       
@@ -54,7 +33,7 @@ const Hero: React.FC = React.memo(() => {
         aria-hidden="true"
       >
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
