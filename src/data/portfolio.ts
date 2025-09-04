@@ -229,14 +229,14 @@ export const contactMethods: ContactMethod[] = [
   // },
   {
     type: "LinkedIn",
-    value: "/in/mattnashproduct",
-    action: "https://linkedin.com/in/mattnashproduct",
+    value: "/in/themattnash",
+    action: "https://linkedin.com/in/themattnash",
     description: "Let's connect and discuss opportunities"
   },
   {
     type: "Schedule Call",
     value: "30-min consultation",
-    action: "https://calendly.com/mattnash",
+    action: "https://calendly.com/themattnash",
     description: "Book a time that works for both of us"
   }
 ];
