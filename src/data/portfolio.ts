@@ -242,12 +242,10 @@ export const contactMethods: ContactMethod[] = [
 ];
 
 export const availableFor = [
-  "Senior Product Leadership Roles",
+  "Product Leadership Roles",
+  "Product Strategy Consulting",
   "Digital Transformation Consulting",
-  "E-commerce & Marketplace Strategy",
-  "AI/ML Product Implementation",
-  "Speaking Engagements",
-  "Board Advisory Positions"
+  "E-Commerce Growth Consulting",
 ];
 
 export const education: Education = {
