@@ -258,8 +258,6 @@ export const education: Education = {
 };
 
 export const certifications = [
-  "Product Management Certification - General Assembly",
-  "Agile Product Management - Scrum Alliance",
-  "Google Analytics Individual Qualification",
-  "AWS Cloud Practitioner"
+  "Pragmatic Marketing - Pragmatic Institute",
+  "Product-led Certification - Pendo.io"
 ]; 
