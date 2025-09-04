@@ -12,8 +12,8 @@ const Index: React.FC = React.memo(() => {
     <main className="min-h-screen">
       <Hero />
       <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Education />
       <Contact />
       <Footer />
