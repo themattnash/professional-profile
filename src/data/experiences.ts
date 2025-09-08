@@ -6,21 +6,21 @@ export const experiences: Experience[] = [
     company: "MANSCAPED",
     period: "Jun 2022 – Feb 2023",
     location: "San Diego, CA / Remote",
-    description: "Unicorn DTC brand redefining men’s grooming through digital innovation and global expansion.",
+    description: "Directed global digital transformation for unicorn DTC brand, leading 25+ cross-functional team and delivering scalable commerce infrastructure.",
     achievements: [
-      "Directed a cross-functional team of 25+ to deliver a full-scale Shopify Plus transformation, ensuring stability and continuity through peak BFCM traffic.",
-      "Spearheaded development of modern CMS, DAM, payments infrastructure, and design system, improving platform reliability by 30% and enabling scalable global operations.",
-      "Managed $1.5M vendor portfolio; drove discovery-to-delivery documentation across infrastructure projects, accelerating time-to-market and reducing engineering rework."
+      "Delivered full-scale Shopify Plus migration, ensuring platform stability and feature continuity during peak BFCM traffic.",
+      "Introduced modern CMS, DAM, payments infrastructure, and design system, improving reliability by 30% and enabling global expansion.",
+      "Managed $1.5M vendor portfolio and standardized technical documentation, accelerating time-to-market and reducing engineering rework."
     ],
     skills: [
-      "Shopify Plus Transformation",
+      "Digital Transformation",
+      "Shopify Plus",
       "CMS",
       "DAM",
       "Payments Infrastructure",
-      "Design System",
-      "Platform Reliability",
+      "Design Systems",
       "Vendor Management",
-      "Global Operations"
+      "Scalable Global Operations"
     ]
   },
   {
@@ -28,18 +28,19 @@ export const experiences: Experience[] = [
     company: "The Washington Post / Arc XP",
     period: "Oct 2021 – Jun 2023",
     location: "Washington, D.C. / Remote",
-    description: "Cloud-native, AI-powered digital experience platform delivering enterprise-grade publishing, personalization, and monetization.",
+    description: "Drove SaaS platform growth and AI adoption for Arc XP, expanding beyond publishing into enterprise and commerce verticals.",
     achievements: [
-      "Led Arc XP’s expansion into e-commerce and enterprise verticals by launching demo environments and aligning OKRs to ICPs, increasing qualified leads by 17% and lifting customer acquisition 3% YoY.",
-      "Deployed AI/ML recommendation models across a global publisher network, boosting session depth and engagement for leading media brands."
+      "Launched vertical-specific demo sites and aligned OKRs to ICPs, increasing qualified leads by 17% and lifting customer acquisition by 3% YoY.",
+      "Deployed AI/ML-powered personalization models across global publisher network, improving engagement and session depth for leading media brands."
     ],
     skills: [
+      "SaaS Platforms",
+      "Enterprise GTM",
       "E-commerce Expansion",
-      "Enterprise Verticals",
-      "Demo Environments",
-      "OKRs to ICPs Alignment",
-      "AI/ML Recommendations",
-      "User Engagement"
+      "AI/ML Personalization",
+      "Digital Experience Platforms",
+      "Customer Acquisition",
+      "Platform Growth"
     ]
   },
   {
@@ -47,38 +48,39 @@ export const experiences: Experience[] = [
     company: "Trader Interactive",
     period: "Jan 2020 – Sep 2021",
     location: "Norfolk, VA / Remote",
-    description: "Marketplace platform connecting buyers and sellers across powersports, RVs, marine, and commercial vehicles.",
+    description: "Launched industry-first digital retailing solutions, transforming Trader Interactive into a full-stack marketplace and commerce platform.",
     achievements: [
-      "Launched the powersports industry’s first end-to-end e-commerce checkout (trade-in, financing, direct payments, DMV titling), unlocking $150M+ annual revenue for dealers and OEMs.",
-      "Built trade-in valuation and bid-offer tools, generating $100K+ in new monthly monetization and strengthening dealer engagement."
+      "Introduced first end-to-end powersports e-commerce checkout (trade-in, financing, direct payments, DMV titling), unlocking $150M+ in annual dealer and OEM revenue.",
+      "Delivered trade-in valuation and bid-based offer tools, generating $100K+ in new monthly monetization and strengthening dealer engagement."
     ],
     skills: [
-      "Digital Checkout",
+      "Digital Retailing",
+      "E-commerce Checkout",
+      "FinTech Integrations",
       "Trade-in Valuation",
-      "Financing",
-      "Direct Payments",
-      "DMV Titling",
-      "Monetization",
-      "Dealer Engagement"
+      "Revenue Growth",
+      "Dealer Engagement",
+      "Marketplace Strategy"
     ]
   },
   {
     title: "Director of Product Management & Technology",
-    company: "Athletic Greens",
+    company: "Athletic Greens (AG1)",
     period: "Apr 2019 – Oct 2019",
     location: "Las Vegas, NV / Remote",
-    description: "Subscription DTC brand dominating the health optimization space.",
+    description: "Directed product and technology strategy for high-growth DTC subscription brand, enhancing scalability and retention.",
     achievements: [
-      "Evaluated vendors and led discovery for subscription platform enhancements, enabling scalable growth and stronger retention.",
-      "Implemented a modern CMS and launched SEO-optimized content features, driving engagement and organic traffic growth."
+      "Led vendor evaluations and discovery for subscription platform enhancements, strengthening retention and supporting global scale.",
+      "Implemented modern CMS and SEO-optimized content capabilities, boosting engagement and organic acquisition."
     ],
     skills: [
-      "Vendor Evaluation",
-      "Subscription Platform",
+      "Subscription Platforms",
+      "Retention Strategy",
+      "Vendor Management",
       "CMS",
-      "SEO Content",
-      "Engagement",
-      "Organic Growth"
+      "SEO Optimization",
+      "Scalable Growth",
+      "Digital Health"
     ]
   },
   {
@@ -86,18 +88,18 @@ export const experiences: Experience[] = [
     company: "Leesa Sleep",
     period: "Dec 2017 – Mar 2019",
     location: "Virginia Beach, VA",
-    description: "DTC unicorn disrupting the sleep economy with a mission-driven brand.",
+    description: "Built experimentation discipline and scalable processes for mission-driven DTC unicorn disrupting the sleep economy.",
     achievements: [
-      "Built company-wide A/B testing and experimentation program, delivering a 10% conversion lift and enabling personalized promo flows.",
-      "Introduced scalable product processes and governance frameworks, improving cross-functional alignment and delivery velocity."
+      "Established company-wide A/B testing and experimentation program, lifting conversion rates by 10% and enabling personalization at scale.",
+      "Introduced governance frameworks and product processes, improving cross-functional alignment and accelerating delivery velocity."
     ],
     skills: [
-      "A/B Testing Program",
+      "Conversion Optimization",
+      "A/B & Multivariate Testing",
       "Personalization",
-      "Product Processes",
-      "Governance",
+      "Product Governance",
       "Cross-Functional Alignment",
-      "Delivery Velocity"
+      "DTC Growth"
     ]
   },
   {
@@ -105,18 +107,18 @@ export const experiences: Experience[] = [
     company: "Dominion Enterprises (ForRent.com)",
     period: "Dec 2015 – Dec 2017",
     location: "Norfolk, VA",
-    description: "Online apartment marketplace later acquired by CoStar Group.",
+    description: "Drove ML-powered pricing innovation and analytics infrastructure for rental marketplace acquired by CoStar Group.",
     achievements: [
-      "Developed BI tools leveraging ML to set optimal rental rates nationwide, unlocking premium features and upsell revenue.",
-      "Launched reporting and backend analytics infrastructure, expanding subscription revenue and customer LTV."
+      "Developed BI tools with ML pricing models, enabling nationwide rental rate optimization and premium feature upsells.",
+      "Launched reporting and backend analytics infrastructure, expanding subscription revenue and improving customer LTV."
     ],
     skills: [
       "Business Intelligence",
-      "ML Pricing",
-      "Reporting",
+      "Machine Learning Pricing",
       "Analytics Infrastructure",
-      "Subscription Revenue",
-      "Customer LTV"
+      "Subscription Monetization",
+      "Customer LTV",
+      "PropTech"
     ]
   },
   {
@@ -124,17 +126,17 @@ export const experiences: Experience[] = [
     company: "Dominion Enterprises (ForRent.com)",
     period: "Dec 2013 – Dec 2015",
     location: "Norfolk, VA",
-    description: "Led CRO strategy and performance optimization across the product portfolio.",
+    description: "Led CRO and performance optimization strategy across digital portfolio, driving measurable engagement and revenue impact.",
     achievements: [
-      "Led CRO strategy across product portfolio, achieving 13% lift in conversions and 30% faster site performance.",
-      "Used analytics to pinpoint UX friction, driving 20% higher engagement and improved funnel efficiency."
+      "Delivered CRO strategy that achieved 13% lift in conversions and 30% faster site performance.",
+      "Leveraged analytics to identify UX friction, boosting engagement by 20% and improving funnel efficiency."
     ],
     skills: [
       "CRO Strategy",
       "Performance Optimization",
-      "Product Analytics",
+      "UX Analytics",
       "Engagement",
-      "Funnel Efficiency"
+      "Funnel Optimization"
     ]
   },
   {
@@ -142,16 +144,17 @@ export const experiences: Experience[] = [
     company: "TUI Group – Great Atlantic Sports Travel",
     period: "Apr 2008 – Dec 2013",
     location: "Virginia Beach, VA",
-    description: "Travel and hospitality provider for global sporting events.",
+    description: "Directed digital rebrand and commerce overhaul for global sports travel business, increasing efficiency and revenue.",
     achievements: [
-      "Directed full lifecycle of company rebrand and e-commerce overhaul, launching new CMS that cut publishing time 30%.",
-      "Grew organic traffic 25% and online sales 15% through SEO/SEM; improved agility to reduce site launch timelines 20%."
+      "Led full lifecycle of rebrand and e-commerce platform overhaul, launching CMS that cut publishing time by 30%.",
+      "Increased organic traffic 25% and online sales 15% via SEO/SEM and CRO; reduced site launch timelines 20% through agile delivery."
     ],
     skills: [
-      "Rebrand",
+      "Digital Rebrand",
       "E-commerce Overhaul",
       "CMS",
       "SEO/SEM",
+      "CRO",
       "Agile Delivery"
     ]
   }
