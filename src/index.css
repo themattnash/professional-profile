@@ -80,7 +80,7 @@
   }
   
   .section-spacing {
-    @apply py-20 lg:py-28;
+    @apply py-16 md:py-20 lg:py-28;
   }
   
   .container-custom {
@@ -94,6 +94,23 @@
 
   .section-subtitle {
     @apply text-xl text-muted-foreground max-w-3xl mx-auto;
+  }
+
+  /* Subsection and card title utilities */
+  .subsection-title {
+    @apply text-2xl font-semibold text-foreground;
+  }
+
+  .minor-title {
+    @apply font-semibold text-foreground;
+  }
+
+  .card-title {
+    @apply text-2xl text-foreground;
+  }
+
+  .card-title-sm {
+    @apply text-xl text-foreground;
   }
 
   /* Professional button variants */

@@ -7,14 +7,14 @@ const Skills: React.FC = React.memo(() => {
   return (
     <section id="skills" className="section-spacing gradient-subtle" aria-labelledby="skills-heading">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 id="skills-heading" className="section-title">Skills & Expertise</h2>
           <p className="section-subtitle">A comprehensive toolkit combining strategic thinking, technical knowledge, and user-centered design principles.</p>
         </div>
 
         {/* Methodologies */}
         <div className="bg-card rounded-2xl p-8 lg:p-12 shadow-elegant mb-16">
-          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
+          <h3 className="subsection-title mb-8 text-center">
             Product Methodologies & Frameworks
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
@@ -37,7 +37,7 @@ const Skills: React.FC = React.memo(() => {
           {skillCategories.map((category, index) => (
             <Card key={index} className="shadow-elegant">
               <CardHeader className="p-8">
-                <CardTitle className="text-xl text-foreground">{category.title}</CardTitle>
+                <CardTitle className="card-title-sm">{category.title}</CardTitle>
               </CardHeader>
               <CardContent className="p-8 pt-0">
                 <div className="space-y-4">

@@ -9,7 +9,7 @@ const Contact: React.FC = React.memo(() => {
   return (
     <section id="contact" className="section-spacing gradient-subtle" aria-labelledby="contact-heading">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 id="contact-heading" className="section-title">Let's Work Together</h2>
           <p className="section-subtitle">Ready to transform your product vision into reality? I'm always interested in discussing new opportunities and challenges.</p>
         </div>
@@ -17,7 +17,7 @@ const Contact: React.FC = React.memo(() => {
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Contact Methods */}
           <div>
-            <h3 className="text-2xl font-semibold text-foreground mb-8">
+            <h3 className="subsection-title mb-8">
               Get In Touch
             </h3>
             <div className="space-y-6">
@@ -29,7 +29,7 @@ const Contact: React.FC = React.memo(() => {
                         <div className="w-6 h-6 bg-primary rounded-full" aria-hidden="true"></div>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">{method.type}</h4>
+                        <h4 className="minor-title mb-1">{method.type}</h4>
                         <p className="text-primary font-medium mb-2">{method.value}</p>
                         <p className="text-muted-foreground text-sm mb-4">{method.description}</p>
                         <Button 
@@ -51,7 +51,7 @@ const Contact: React.FC = React.memo(() => {
 
           {/* Availability */}
           <div>
-            <h3 className="text-2xl font-semibold text-foreground mb-8">
+            <h3 className="subsection-title mb-8">
               Available For
             </h3>
             <Card className="shadow-elegant">
@@ -66,7 +66,7 @@ const Contact: React.FC = React.memo(() => {
                 </div>
                 
                 <div className="mt-8 p-6 bg-primary-light rounded-xl">
-                  <h4 className="font-semibold text-foreground mb-3">
+                  <h4 className="minor-title mb-3">
                     Current Status
                   </h4>
                   <p className="text-muted-foreground mb-4">

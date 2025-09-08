@@ -6,7 +6,7 @@ const Education: React.FC = React.memo(() => {
   return (
     <section id="education" className="section-spacing bg-background" aria-labelledby="education-heading">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 id="education-heading" className="section-title">Education & Continuous Learning</h2>
           <p className="section-subtitle">Strong academic foundation combined with ongoing professional development to stay at the forefront of product management.</p>
         </div>
@@ -15,7 +15,7 @@ const Education: React.FC = React.memo(() => {
           {/* Education */}
           <Card className="shadow-elegant">
             <CardHeader className="p-8">
-              <CardTitle className="text-2xl text-foreground">Formal Education</CardTitle>
+              <CardTitle className="card-title">Formal Education</CardTitle>
             </CardHeader>
             <CardContent className="p-8 pt-0">
               <div className="space-y-4">
@@ -32,7 +32,7 @@ const Education: React.FC = React.memo(() => {
           {/* Certifications */}
           <Card className="shadow-elegant">
             <CardHeader className="p-8">
-              <CardTitle className="text-2xl text-foreground">Professional Development</CardTitle>
+              <CardTitle className="card-title">Professional Development</CardTitle>
             </CardHeader>
             <CardContent className="p-8 pt-0">
               <div className="space-y-4">
