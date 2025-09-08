@@ -83,6 +83,11 @@
     @apply py-16 md:py-20 lg:py-28;
   }
   
+  /* Reduced spacing for compact footer */
+  .footer-spacing {
+    @apply py-10 md:py-12;
+  }
+  
   .container-custom {
     @apply max-w-6xl mx-auto px-6 lg:px-8;
   }
