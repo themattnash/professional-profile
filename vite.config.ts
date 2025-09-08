@@ -11,6 +11,15 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: true, // 👈 add this for readable stack traces in production
+    sourcemap: true, // keep readable stack traces in production
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react'],
+          'react-dom': ['react-dom'],
+          router: ['react-router-dom', '@remix-run/router'],
+        },
+      },
+    },
   },
 })

@@ -1,7 +1,20 @@
 import React from 'react';
-import { heroData } from "@/data/portfolio";
+import { heroData } from "@/data/hero";
 
 const Hero: React.FC = React.memo(() => {
+  React.useEffect(() => {
+    // Preload hero background image to improve LCP
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = heroData.backgroundImage as unknown as string;
+    // @ts-expect-error fetchpriority is not yet in TS lib dom types everywhere
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
   return (
     <section 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
