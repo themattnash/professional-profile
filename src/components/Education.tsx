@@ -7,12 +7,8 @@ const Education: React.FC = React.memo(() => {
     <section id="education" className="section-spacing bg-background" aria-labelledby="education-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 id="education-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Education & Continuous Learning
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Strong academic foundation combined with ongoing professional development to stay at the forefront of product management.
-          </p>
+          <h2 id="education-heading" className="section-title">Education & Continuous Learning</h2>
+          <p className="section-subtitle">Strong academic foundation combined with ongoing professional development to stay at the forefront of product management.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
