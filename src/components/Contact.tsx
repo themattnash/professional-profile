@@ -7,7 +7,7 @@ import { openExternalLink } from "@/lib/utils";
 const Contact: React.FC = React.memo(() => {
 
   return (
-    <section id="contact" className="section-spacing gradient-subtle" aria-labelledby="contact-heading">
+    <section id="contact" className="section-spacing bg-background" aria-labelledby="contact-heading">
       <div className="container-custom">
         <div className="text-center mb-12 md:mb-16">
           <h2 id="contact-heading" className="section-title">Let's Work Together</h2>
