@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { contactMethods, availableFor } from "@/data/portfolio";
+import { contactMethods, availableFor } from "@/data/contact";
 import { openExternalLink } from "@/lib/utils";
 
 const Contact: React.FC = React.memo(() => {

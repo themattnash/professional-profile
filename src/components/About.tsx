@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { highlights } from "@/data/portfolio";
+import { highlights } from "@/data/highlights";
 
 const About: React.FC = React.memo(() => {
   return (

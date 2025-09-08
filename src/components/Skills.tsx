@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { skillCategories, methodologies } from "@/data/portfolio";
+import { skillCategories, methodologies } from "@/data/skills";
 
 const Skills: React.FC = React.memo(() => {
   return (

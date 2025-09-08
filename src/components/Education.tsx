@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { education, certifications } from "@/data/portfolio";
+import { education, certifications } from "@/data/education";
 
 const Education: React.FC = React.memo(() => {
   return (
