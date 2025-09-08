@@ -13,7 +13,7 @@ const Skills: React.FC = React.memo(() => {
         </div>
 
         {/* Methodologies */}
-        <div className="bg-card rounded-2xl p-8 lg:p-12 shadow-elegant mb-16">
+        <div className="bg-card rounded-2xl p-8 lg:p-12 shadow-elegant mb-12 md:mb-16">
           <h3 className="subsection-title mb-8 text-center">
             Product Methodologies & Frameworks
           </h3>
