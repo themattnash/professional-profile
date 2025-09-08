@@ -4,7 +4,7 @@ import { highlights } from "@/data/highlights";
 
 const About: React.FC = React.memo(() => {
   return (
-    <section id="about" className="section-spacing gradient-subtle" aria-labelledby="about-heading">
+    <section id="about" className="section-spacing bg-background" aria-labelledby="about-heading">
       <div className="container-custom">
         <div className="text-center mb-12 md:mb-16">
           <h2 id="about-heading" className="section-title">Digital Product Leadership</h2>

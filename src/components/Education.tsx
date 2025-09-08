@@ -4,7 +4,7 @@ import { education, certifications } from "@/data/education";
 
 const Education: React.FC = React.memo(() => {
   return (
-    <section id="education" className="section-spacing bg-background" aria-labelledby="education-heading">
+    <section id="education" className="section-spacing gradient-subtle" aria-labelledby="education-heading">
       <div className="container-custom">
         <div className="text-center mb-12 md:mb-16">
           <h2 id="education-heading" className="section-title">Education & Continuous Learning</h2>
