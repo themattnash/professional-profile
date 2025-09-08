@@ -1,21 +1,17 @@
 import React from 'react';
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Education from "@/components/Education";
-import Contact from "@/components/Contact";
+import LazyLoad from '@/components/LazyLoad';
 import Footer from "@/components/Footer";
 
 const Index: React.FC = React.memo(() => {
   return (
     <main className="min-h-screen">
       <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Education />
-      <Contact />
+      <LazyLoad loader={() => import('@/components/About')} />
+      <LazyLoad loader={() => import('@/components/Skills')} />
+      <LazyLoad loader={() => import('@/components/Experience')} />
+      <LazyLoad loader={() => import('@/components/Education')} />
+      <LazyLoad loader={() => import('@/components/Contact')} />
       <Footer />
     </main>
   );
