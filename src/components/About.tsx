@@ -8,18 +8,12 @@ const About: React.FC = React.memo(() => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 id="about-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            About Me
+            Digital Product Leadership
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Digital product leader with 15+ years of experience building impactful, scalable solutions.
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h3 className="text-2xl font-semibold text-foreground mb-6">
-              Digital Product Leadership
-            </h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               I've led product at unicorn-status DTC brands, built AI-powered personalization systems for global SaaS platforms, and delivered eCommerce infrastructure responsible for over $150M+ in new revenue. My focus is on building scalable digital platforms and high-trust, high-impact teams that ship systems users love and businesses rely on.
             </p>

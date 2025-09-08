@@ -74,30 +74,66 @@ export const experiences: Experience[] = [
     title: "Director of Product Management & Technology",
     company: "Athletic Greens",
     period: "Apr. 2019 - Oct. 2019",
-    location: "New York, NY",
-    description: "Led product and technology strategy for leading nutrition and wellness DTC brand.",
+    location: "Remote",
+    description: "Led product and technology strategy for a fast-scaling nutrition and wellness DTC brand, with a focus on subscription growth, retention, and data-driven optimization.",
     achievements: [
-      "Directed product strategy for subscription-based nutrition platform",
-      "Optimized customer acquisition and retention through data-driven product decisions",
-      "Led cross-functional teams in rapid product iteration and testing",
-      "Implemented growth-focused product development processes"
+      "Directed product strategy for a subscription-based nutrition platform, aligning roadmap delivery with acquisition and retention goals.",
+      "Optimized customer acquisition and lifecycle retention through analytics-driven product decisions.",
+      "Guided cross-functional teams in rapid product iteration, testing, and launch.",
+      "Implemented growth-focused product development processes that accelerated learning and delivery."
     ],
-    skills: ["Subscription Products", "DTC Strategy", "Growth Optimization", "Team Leadership"]
+    skills: ["Subscription Growth Strategy", "DTC Strategy", "Growth Optimization", "Team Leadership", "Rapid Product Iteration", "Agile Process", "Shopify Plus"]
   },
   {
     title: "Senior eCommerce Product Manager",
     company: "Leesa Sleep",
     period: "Dec. 2017 - Mar. 2019",
     location: "Virginia Beach, VA",
-    description: "Product management for innovative DTC mattress and sleep technology company.",
+    description: "Owned product management for a high-growth DTC mattress and sleep technology company, driving platform optimization, conversion lift, and end-to-end customer journey improvements.",
     achievements: [
-      "Led eCommerce platform optimization and user experience improvements",
-      "Implemented A/B testing frameworks for conversion optimization",
-      "Managed product roadmap for multi-million dollar revenue platform",
-      "Collaborated with design and engineering on customer journey optimization"
+      "Directed eCommerce platform enhancements and UX improvements, scaling a multi-million-dollar revenue channel.",
+      "Implemented structured A/B testing frameworks that informed conversion rate optimization and data-driven decision making.",
+      "Managed product roadmap and collaborated cross-functionally with design and engineering to optimize customer acquisition and retention flows."
     ],
-    skills: ["eCommerce Optimization", "A/B Testing", "UX Strategy", "Conversion Optimization"]
-  }
+    skills: ["eCommerce Growth Strategy", "A/B Testing", "UX/UI", "Conversion Optimization", "Shopify Plus"]
+  },
+  {
+    title: "Product Development Manager",
+    company: "Dominion Enterprises - ForRent.com",
+    period: "Dec. 2015 - Dec. 2017",
+    location: "Norfolk, VA",
+    description: "Led product development for a leading online apartment rental marketplace connecting property managers with millions of renters nationwide, with a focus on analytics, pricing optimization, and customer value expansion.",
+    achievements: [
+      "Developed market-level business intelligence products powered by machine learning, enabling property managers to set optimal rental rates by ZIP code nationwide.",
+      "Launched advanced customer reporting capabilities and backend analytics infrastructure, unlocking premium features and upsell opportunities that drove subscription revenue and increased customer lifetime value."
+    ],
+    skills: ["Machine Learning", "Analytics", "Pricing Optimization", "Customer Value Expansion", "Team Leadership"]
+  },
+  {
+    title: "Senior Product Developer",
+    company: "Dominion Enterprises - ForRent.com",
+    period: "Dec 2013 – Dec 2015",
+    location: "Norfolk, VA",
+    description: "Drove conversion rate optimization and product performance initiatives across a large digital real estate platform, using data-driven experimentation to improve acquisition and engagement.",
+    achievements: [
+      "Led a company-wide CRO strategy, delivering a 13% lift in conversion rates and a 30% improvement in site performance through structured A/B testing and iterative optimization.",
+      "Leveraged product analytics to identify UX friction points and prioritize high-impact opportunities, boosting user engagement by 20% and improving funnel efficiency across acquisition flows."
+    ],
+    skills: ["Conversion Rate Optimization", "Product Analytics", "UX Optimization", "Funnel Efficiency", "A/B Testing", "Agile Process", "Team Leadership"]
+  },
+  {
+    title: "Content Strategy & eCommerce Lead",
+    company: "TUI Group - Great Atlantic Sports Travel",
+    period: "Apr. 2008 - Dec. 2013",
+    location: "Virginia Beach, VA",
+    description: "Owned product and technology strategy during a critical growth phase, leading digital transformation and revenue acceleration for the company’s eCommerce business.",
+    achievements: [
+      "Directed end-to-end rebrand and e-commerce platform overhaul, launching a new CMS that boosted team efficiency and reduced content publishing time by 30%.",
+      "Delivered 25% increase in organic traffic and 15% lift in online sales through SEO/SEM optimization, CRO testing, and data-driven iteration.",
+      "Reduced new site feature release cycles by 20% by introducing agile workflows and cross-functional alignment practices."
+    ],
+    skills: ["Content Strategy", "E-Commerce", "SEO/SEM", "Conversion Rate Optimization", "Agile Process", "CMS", "Team Leadership"]
+  },
 ];
 
 // export const projects: Project[] = [
