@@ -16,8 +16,28 @@ const Skills: React.FC = React.memo(() => {
           </p>
         </div>
 
+        {/* Methodologies */}
+        <div className="bg-card rounded-2xl p-8 lg:p-12 shadow-elegant mb-16">
+          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
+            Product Methodologies & Frameworks
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {methodologies.map((method, index) => (
+              <div key={index} className="flex gap-4">
+                <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 bg-primary rounded-full" aria-hidden="true"></div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">{method.name}</h4>
+                  <p className="text-muted-foreground">{method.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Technical Skills */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <Card key={index} className="shadow-elegant">
               <CardHeader className="p-8">
@@ -38,26 +58,6 @@ const Skills: React.FC = React.memo(() => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Methodologies */}
-        <div className="bg-card rounded-2xl p-8 lg:p-12 shadow-elegant">
-          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
-            Product Methodologies & Frameworks
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {methodologies.map((method, index) => (
-              <div key={index} className="flex gap-4">
-                <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center flex-shrink-0">
-                  <div className="w-6 h-6 bg-primary rounded-full" aria-hidden="true"></div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">{method.name}</h4>
-                  <p className="text-muted-foreground">{method.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
