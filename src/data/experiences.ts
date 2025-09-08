@@ -65,7 +65,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Director of Product Management & Technology",
-    company: "Athletic Greens (AG1)",
+    company: "Athletic Greens / AG1",
     period: "Apr 2019 – Oct 2019",
     location: "Las Vegas, NV / Remote",
     description: "Directed product and technology strategy for high-growth DTC subscription brand, enhancing scalability and retention.",
@@ -104,7 +104,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Product Development Manager",
-    company: "Dominion Enterprises (ForRent.com)",
+    company: "Dominion Enterprises / ForRent.com",
     period: "Dec 2015 – Dec 2017",
     location: "Norfolk, VA",
     description: "Drove ML-powered pricing innovation and analytics infrastructure for rental marketplace acquired by CoStar Group.",
@@ -123,7 +123,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Senior Product Developer",
-    company: "Dominion Enterprises (ForRent.com)",
+    company: "Dominion Enterprises / ForRent.com",
     period: "Dec 2013 – Dec 2015",
     location: "Norfolk, VA",
     description: "Led CRO and performance optimization strategy across digital portfolio, driving measurable engagement and revenue impact.",
