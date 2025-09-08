@@ -7,7 +7,7 @@ const Experience: React.FC = React.memo(() => {
   return (
     <section id="experience" className="section-spacing bg-background" aria-labelledby="experience-heading">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 id="experience-heading" className="section-title">Proven Product Impact</h2>
           <p className="section-subtitle">A history of building and scaling digital products that drive revenue, boost engagement, and create lasting user value.</p>
         </div>
@@ -18,7 +18,7 @@ const Experience: React.FC = React.memo(() => {
               <CardHeader className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div>
-                    <CardTitle className="text-2xl text-foreground mb-2">
+                    <CardTitle className="card-title mb-2">
                       {exp.title}
                     </CardTitle>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-lg">
@@ -39,7 +39,7 @@ const Experience: React.FC = React.memo(() => {
                 </p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-foreground mb-4">Key Achievements:</h4>
+                  <h4 className="minor-title mb-4">Key Achievements:</h4>
                   <ul className="space-y-2" role="list">
                     {exp.achievements.map((achievement, achIndex) => (
                       <li key={achIndex} className="flex items-start gap-3">
@@ -51,7 +51,7 @@ const Experience: React.FC = React.memo(() => {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-foreground mb-3">Core Focus Areas:</h4>
+                  <h4 className="minor-title mb-3">Core Focus Areas:</h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill, skillIndex) => (
                       <Badge key={skillIndex} variant="secondary" className="bg-secondary text-secondary-foreground">
