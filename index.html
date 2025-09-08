@@ -23,10 +23,18 @@
     <meta name="twitter:description" content="Product Manager specializing in user-centric product development. View my portfolio of work, case studies, and professional achievements." />
     <meta name="twitter:image" content="https://your-portfolio-url.com/path-to-image.jpg" />
 
-    <!-- Fonts -->
+    <!-- Fonts: async load to avoid render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
     
   </head>
   <body>
