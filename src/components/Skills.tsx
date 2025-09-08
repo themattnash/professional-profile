@@ -8,12 +8,8 @@ const Skills: React.FC = React.memo(() => {
     <section id="skills" className="section-spacing gradient-subtle" aria-labelledby="skills-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 id="skills-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Skills & Expertise
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit combining strategic thinking, technical knowledge, and user-centered design principles.
-          </p>
+          <h2 id="skills-heading" className="section-title">Skills & Expertise</h2>
+          <p className="section-subtitle">A comprehensive toolkit combining strategic thinking, technical knowledge, and user-centered design principles.</p>
         </div>
 
         {/* Methodologies */}

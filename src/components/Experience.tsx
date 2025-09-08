@@ -8,12 +8,8 @@ const Experience: React.FC = React.memo(() => {
     <section id="experience" className="section-spacing bg-background" aria-labelledby="experience-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 id="experience-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Proven Product Impact
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A history of building and scaling digital products that drive revenue, boost engagement, and create lasting user value.
-          </p>
+          <h2 id="experience-heading" className="section-title">Proven Product Impact</h2>
+          <p className="section-subtitle">A history of building and scaling digital products that drive revenue, boost engagement, and create lasting user value.</p>
         </div>
 
         <div className="space-y-8">

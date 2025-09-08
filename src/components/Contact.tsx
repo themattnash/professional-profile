@@ -10,12 +10,8 @@ const Contact: React.FC = React.memo(() => {
     <section id="contact" className="section-spacing gradient-subtle" aria-labelledby="contact-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 id="contact-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Let's Work Together
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your product vision into reality? I'm always interested in discussing new opportunities and challenges.
-          </p>
+          <h2 id="contact-heading" className="section-title">Let's Work Together</h2>
+          <p className="section-subtitle">Ready to transform your product vision into reality? I'm always interested in discussing new opportunities and challenges.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">

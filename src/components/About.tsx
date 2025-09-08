@@ -7,9 +7,7 @@ const About: React.FC = React.memo(() => {
     <section id="about" className="section-spacing gradient-subtle" aria-labelledby="about-heading">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 id="about-heading" className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Digital Product Leadership
-          </h2>
+          <h2 id="about-heading" className="section-title">Digital Product Leadership</h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
