@@ -141,7 +141,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Content Strategy & eCommerce Lead",
-    company: "TUI Group – Great Atlantic Sports Travel",
+    company: "TUI Group / Great Atlantic Sports Travel",
     period: "Apr 2008 – Dec 2013",
     location: "Virginia Beach, VA",
     description: "Directed digital rebrand and commerce overhaul for global sports travel business, increasing efficiency and revenue.",
