@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     title: "Director, Digital Product",
     company: "MANSCAPED",
-    period: "Jun 2022 – Feb 2023",
+    period: "Jun 2023 – Feb 2025",
     location: "San Diego, CA / Remote",
     description: "Directed global digital transformation for MANSCAPED, a unicorn DTC brand, leading 25+ cross-functional team to deliver scalable commerce infrastructure and enable international expansion.",
     achievements: [
