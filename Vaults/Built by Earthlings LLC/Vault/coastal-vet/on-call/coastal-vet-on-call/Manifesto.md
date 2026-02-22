@@ -1,9 +1,9 @@
-# Engineering Manifesto
 
-| Version | Date | Author | Summary |
-|---------|------|--------|---------|
-| 1.1.0 | 2026-02-22 | Matt Nash + Claude Sonnet 4.6 | AI-native workflow optimizations: updated sections I, III, V, VI, VII, IX, XIII; added XIV (AI Agent Governance) and XV (Prompt and Context Integrity) |
-| 1.0.0 | 2026-02-22 | Matt Nash | Initial manifesto: sections I–XIII |
+
+| Version | Date       | Author                        | Summary                                                                                                                                                |
+| ------- | ---------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1.1.0   | 2026-02-22 | Matt Nash + Claude Sonnet 4.6 | AI-native workflow optimizations: updated sections I, III, V, VI, VII, IX, XIII; added XIV (AI Agent Governance) and XV (Prompt and Context Integrity) |
+| 1.0.0   | 2026-02-22 | Matt Nash                     | Initial manifesto: sections I–XIII                                                                                                                     |
 
 ---
 
