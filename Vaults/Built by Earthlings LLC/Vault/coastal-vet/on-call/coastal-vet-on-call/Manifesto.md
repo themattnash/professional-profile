@@ -1,3 +1,12 @@
+# Engineering Manifesto
+
+| Version | Date | Author | Summary |
+|---------|------|--------|---------|
+| 1.1.0 | 2026-02-22 | Matt Nash + Claude Sonnet 4.6 | AI-native workflow optimizations: updated sections I, III, V, VI, VII, IX, XIII; added XIV (AI Agent Governance) and XV (Prompt and Context Integrity) |
+| 1.0.0 | 2026-02-22 | Matt Nash | Initial manifesto: sections I–XIII |
+
+---
+
 I. Clear Requirements & Vision
 Every project begins with a formally defined, versioned specification that explicitly states the problem being solved, the users and system actors involved, and the measurable definition of success; The problem must include context, constraints, impact, and explicit non-goals; All users and actors must be enumerated and mapped to functional requirements — including AI agents, whose capabilities, trust levels, and interaction boundaries must be defined with the same rigor as human actors; Success criteria must be quantifiable, testable, and observable (functional and non-functional); Ambiguity is unacceptable — if it is not written in the specification, it does not exist, and if it cannot be measured, it is not complete; Specifications used to drive AI-assisted development must follow machine-readable conventions: discrete labeled requirements with unambiguous pass/fail acceptance criteria, bounded scope, and zero tolerance for unresolved placeholders at execution time — ambiguity that a human engineer resolves from context becomes a source of hallucination for an AI agent and must be resolved before planning begins.
 
@@ -45,7 +54,7 @@ The instructions, context, and constraints provided to an AI agent constitute a 
 
 ---
 
-**Version**: 1.1.0 | **Ratified**: 2026-02-22 | **Last Amended**: 2026-02-22
+**Version**: 1.1.0 | **Ratified**: 2026-02-22 | **Last Amended**: 2026-02-22 | **History**: see top of document
 
 ## Changelog
 
