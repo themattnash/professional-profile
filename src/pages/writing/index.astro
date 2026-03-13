@@ -2,11 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const allEssays = (await getCollection('essays'))
+const published = (await getCollection('essays', ({ data }) => data.published))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-const published = allEssays.filter(e => e.data.published);
-const upcoming = allEssays.filter(e => !e.data.published);
 
 const categoryLabel: Record<string, string> = {
   'evaluation':    'Evaluation',
@@ -37,8 +34,8 @@ const categoryLabel: Record<string, string> = {
     <button data-filter="failure-modes" class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">Failure Modes</button>
   </div>
 
-  {published.length > 0 && (
-    <section class="mb-16" data-section="published">
+  {published.length > 0 ? (
+    <section data-section="published">
       <ul class="space-y-10" role="list">
         {published.map((essay) => (
           <li data-category={essay.data.category ?? 'uncategorized'}>
@@ -64,42 +61,14 @@ const categoryLabel: Record<string, string> = {
         ))}
       </ul>
     </section>
-  )}
-
-  {upcoming.length > 0 && (
-    <section class={published.length > 0 ? 'pt-8 border-t border-stone-200' : ''} data-section="upcoming">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-stone-600 mb-8">Coming soon</h2>
-      <ul class="space-y-6" role="list">
-        {upcoming.map((essay) => (
-          <li class="flex items-baseline gap-4" data-category={essay.data.category ?? 'uncategorized'}>
-            <span class="text-xs font-mono text-stone-600 shrink-0">
-              {essay.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
-            </span>
-            <div>
-              <div class="flex items-center gap-2 mb-0.5">
-                <a href={`/writing/${essay.slug}`} class="text-stone-700 font-serif hover:text-indigo-700 transition-colors no-underline">{essay.data.title}</a>
-                {essay.data.category && (
-                  <span class="text-xs font-mono text-stone-500 bg-stone-100 px-2 py-0.5 rounded shrink-0">
-                    {categoryLabel[essay.data.category]}
-                  </span>
-                )}
-              </div>
-              <p class="text-stone-600 text-xs mt-1">{essay.data.description}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
-
-  {published.length === 0 && upcoming.length === 0 && (
+  ) : (
     <p class="text-stone-600 text-sm">First essay publishing April 2026.</p>
   )}
 
 <script>
   const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
   const items = document.querySelectorAll<HTMLElement>('li[data-category]');
-  const sections = document.querySelectorAll<HTMLElement>('section[data-section]');
+  const section = document.querySelector<HTMLElement>('section[data-section]');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -111,12 +80,6 @@ const categoryLabel: Record<string, string> = {
       items.forEach(item => {
         const show = filter === 'all' || item.dataset.category === filter;
         item.style.display = show ? '' : 'none';
-      });
-
-      // Hide section headers when all their items are hidden
-      sections.forEach(section => {
-        const visible = section.querySelectorAll('li[data-category]:not([style*="display: none"])');
-        section.style.display = visible.length > 0 ? '' : 'none';
       });
     });
   });
