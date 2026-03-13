@@ -102,10 +102,7 @@ const essays = (await getCollection('essays', ({ data }) => data.published))
         ))}
       </ul>
     ) : (
-      <div class="border border-stone-200 rounded p-6 bg-white">
-        <p class="text-stone-700 text-sm mb-1">First essay publishing April 2026</p>
-        <p class="text-stone-600 text-sm font-mono">Accuracy Is the Floor, Not the Ceiling</p>
-      </div>
+      <p class="text-stone-600 text-sm">First essay publishing April 2026.</p>
     )}
 
     <a href="/writing" class="inline-block mt-8 text-sm text-indigo-600 hover:text-indigo-800 no-underline font-medium py-1">All writing &rarr;</a>
