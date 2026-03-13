@@ -56,7 +56,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <a href="/" class="text-stone-900 font-serif text-lg no-underline hover:text-indigo-600 transition-colors font-normal py-1">
           Matt Nash
         </a>
-        <ul class="flex items-center gap-1 text-sm text-stone-700" role="list">
+
+        <!-- Mobile hamburger button -->
+        <button
+          id="menu-toggle"
+          class="sm:hidden p-2 -mr-2 text-stone-700 hover:text-indigo-600 transition-colors rounded"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="hidden">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+
+        <!-- Desktop nav links -->
+        <ul class="hidden sm:flex items-center gap-1 text-sm text-stone-700" role="list">
           <li><a href="/building" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Building</a></li>
           <li><a href="/reading" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Reading</a></li>
           <li><a href="/writing" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Writing</a></li>
@@ -64,7 +82,33 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <li><a href="/collaborate" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Let's Collaborate</a></li>
         </ul>
       </nav>
+
+      <!-- Mobile dropdown menu -->
+      <div id="mobile-menu" class="hidden sm:hidden border-t border-stone-200">
+        <ul class="max-w-2xl mx-auto px-6 py-2 flex flex-col text-sm text-stone-700" role="list">
+          <li><a href="/building" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 block px-2 py-2.5 rounded hover:bg-stone-100">Building</a></li>
+          <li><a href="/reading" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 block px-2 py-2.5 rounded hover:bg-stone-100">Reading</a></li>
+          <li><a href="/writing" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 block px-2 py-2.5 rounded hover:bg-stone-100">Writing</a></li>
+          <li><a href="/work" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 block px-2 py-2.5 rounded hover:bg-stone-100">Work</a></li>
+          <li><a href="/collaborate" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 block px-2 py-2.5 rounded hover:bg-stone-100">Let's Collaborate</a></li>
+        </ul>
+      </div>
     </header>
+
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+      });
+    </script>
 
     <!-- Content -->
     <main id="main-content" class="flex-1 max-w-2xl mx-auto w-full px-6 py-16">
@@ -75,9 +119,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <footer class="border-t border-stone-200 mt-auto" role="contentinfo">
       <div class="max-w-2xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-stone-600">
         <span>&copy; {new Date().getFullYear()} Matt Nash</span>
-        <a href="https://builtbyearthlings.com" class="no-underline hover:text-indigo-600 transition-colors text-stone-600 py-1" target="_blank" rel="noopener noreferrer">
-          Built by Earthlings
-        </a>
+        <span>🌎 Built by Earthlings</span>
       </div>
     </footer>
   </body>
