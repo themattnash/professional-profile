@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const roles = [
+  {
+    title: 'Product Manager',
+    company: 'Comcast',
+    period: 'Nov 2025 – Present',
+    description: [
+      'Product manager for Xfinity\'s Communities portfolio, responsible for translating complex backend system constraints into customer-facing digital experiences that must work reliably across Comcast\'s device and network ecosystem.',
+      'Define evaluation criteria for new support flows before development begins. Coordinate engineering, UX, legal, and executive stakeholders to ensure constraint trade-offs are named and documented rather than resolved by default through scope cuts.',
+    ],
+  },
+  {
+    title: 'Director, Digital Product',
+    company: 'MANSCAPED',
+    period: 'Jun 2023 – Feb 2025',
+    description: [
+      'Led a 25-person cross-functional team through a full-scale platform migration where the primary constraint was zero degradation during peak traffic. Black Friday/Cyber Monday volumes would expose any reliability gap immediately.',
+      'Designed the migration sequence to isolate failure modes: CMS, payment infrastructure, and design system rebuilt in stages, each evaluated for stability before the next phase began. Platform reliability improved 30%, measured against incident frequency and resolution time.',
+      'Managed $1.5M in vendor contracts with structured evaluation criteria for selection and renewal. Technical documentation from discovery through delivery reduced engineering rework by establishing clear integration boundaries.',
+    ],
+  },
+  {
+    title: 'Senior Product Manager',
+    company: 'The Washington Post (Arc XP)',
+    period: 'Oct 2021 – Jun 2023',
+    description: [
+      'Led product for Arc XP\'s expansion into new verticals. The evaluation problem was fitness for context: each vertical had different content models, user behaviors, and integration requirements. Vertical-specific demo environments let prospects evaluate the platform against their own constraints before purchase, reducing qualification mismatch and improving lead quality 17%.',
+      'Deployed AI/ML recommendation models across Arc XP\'s global publisher network. Aggregate model accuracy was not the evaluation criterion that mattered. The relevant question was whether recommendations performed reliably for publishers with specific audience distributions and editorial standards. A model that performs well on average but fails for a given publisher\'s content structure erodes client trust faster than no recommendation system.',
+    ],
+  },
+  {
+    title: 'Product Manager',
+    company: 'Trader Interactive',
+    period: 'Jan 2020 – Sep 2021',
+    description: [
+      'Launched the powersports industry\'s first end-to-end eCommerce checkout platform: digital purchase agreements, trade-in valuations, financing, payments, and 50-state DMV titling. The product was defined more by its constraints than its features: state-by-state regulatory compliance, lender integration requirements, dealer workflow compatibility, and consumer protection obligations.',
+      'Constraint mapping was the core product discipline. Each state\'s titling requirements imposed different validation rules, document formats, and processing timelines. The system had to handle these variations without exposing complexity to the end user or creating failure modes at state boundaries.',
+    ],
+  },
+  {
+    title: 'Director, Product Management and Technology',
+    company: 'Athletic Greens',
+    period: 'Apr 2019 – Oct 2019',
+    description: [
+      'Athletic Greens is a subscription business where the most consequential failure modes don\'t announce themselves. A billing error or a friction point introduced during a platform migration doesn\'t generate an immediate incident. It generates a customer who doesn\'t renew.',
+      'Evaluated and selected subscription platform enhancements against criteria centered on payment reliability, failure handling at scale, and integration stability. Structured vendor selection around failure modes rather than feature sets. Led CMS implementation under a continuity constraint: the subscription funnel was active throughout, and new content capabilities had to integrate without introducing failure points at the boundary between content and billing systems.',
+    ],
+  },
+  {
+    title: 'Senior eCommerce Product Manager',
+    company: 'Leesa Sleep',
+    period: 'Dec 2017 – Mar 2019',
+    description: [
+      'Built and institutionalized a company-wide experimentation program, A/B testing and multivariate evaluation across the full purchase funnel. The 10% conversion lift was the outcome. The system\'s real value was structural: product decisions were gated by evidence rather than opinion, and every change was evaluated against specific performance criteria before full deployment.',
+      'Designed product governance frameworks that defined how decisions were made, who had authority to approve changes, and what evidence was required to ship.',
+    ],
+  },
+  {
+    title: 'Product Development Manager',
+    company: 'ForRent.com',
+    period: 'Dec 2015 – Dec 2017',
+    description: [
+      'Developed market-level business intelligence tools using ML models to recommend optimal rental rates by ZIP code. The evaluation challenge was calibration: a pricing recommendation is only useful if property managers trust its outputs, which required demonstrating accuracy against local market conditions, not aggregate model performance across all markets. A tool that is right on average but wrong for a specific property manager\'s market erodes trust in the platform.',
+      'Launched customer reporting and analytics infrastructure. The design constraint was interpretability: analytics outputs had to be legible to property managers without data science backgrounds. The system had to present conclusions with enough context to be evaluated by the user, not just consumed.',
+    ],
+  },
+  {
+    title: 'Senior Product Manager',
+    company: 'ForRent.com',
+    period: 'Dec 2013 – Dec 2015',
+    description: [
+      'Led a company-wide conversion rate optimization strategy that functioned as a continuous evaluation architecture. No product change reached full deployment without structured A/B testing against defined success criteria. The conversion lift and performance improvement were outputs of the system. The system itself was the discipline of evaluating before shipping.',
+    ],
+  },
+  {
+    title: 'Content Strategy and eCommerce Lead',
+    company: 'TUI Group',
+    period: 'Apr 2008 – Dec 2013',
+    description: [
+      'Managed a company-wide rebrand and eCommerce platform overhaul. The defining constraint was continuity: content publishing workflows, SEO equity, and active sales flows could not degrade during the transition. Every migration phase was evaluated against regression criteria. The new system had to match or exceed the old system\'s performance before the next phase began.',
+      'Grew organic traffic 25% and online sales 15% through structured SEO/SEM programs and continuous CRO testing. Reduced launch timelines 20% by identifying failure points in the launch sequence earlier, before they became customer-facing problems.',
+    ],
+  },
+];
+---
+
+<Layout
+  title="Work | Matt Nash"
+  description="Nine roles, reframed through evaluation, constraint design, and failure-first thinking."
+>
+  <header class="mb-12">
+    <h1 class="text-3xl font-serif text-stone-900 mb-4">Work</h1>
+    <p class="text-stone-600 text-sm">
+      Nine roles, reframed through evaluation, constraint design, and failure-first thinking.
+    </p>
+  </header>
+
+  <div class="space-y-12">
+    {roles.map((role, i) => (
+      <article class={`${i > 0 ? 'pt-12 border-t border-stone-100' : ''}`}>
+        <div class="mb-4">
+          <h2 class="font-serif text-stone-900 text-lg leading-snug">{role.title}</h2>
+          <div class="flex items-center gap-3 mt-1">
+            <span class="text-stone-600 text-sm">{role.company}</span>
+            <span class="text-stone-400 text-xs">&#8231;</span>
+            <span class="text-stone-600 text-xs font-mono">{role.period}</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          {role.description.map((para) => (
+            <p class="text-stone-600 text-sm leading-relaxed">{para}</p>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <section class="mt-16 pt-12 border-t border-stone-200">
+    <h2 class="text-xs font-mono uppercase tracking-widest text-stone-600 mb-6">Education</h2>
+    <div>
+      <p class="font-serif text-stone-900">B.S. Social Sciences</p>
+      <p class="text-stone-600 text-sm mt-1">Anthropology, Sociology, Psychology</p>
+      <p class="text-stone-600 text-xs font-mono mt-1">James Madison University, 2006</p>
+      <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+        Foundation in social science methodology: construct validity, measurement theory, behavioral analysis.
+        Applied now to AI welfare research and behavioral red teaming.
+      </p>
+    </div>
+  </section>
+</Layout>

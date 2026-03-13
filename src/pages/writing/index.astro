@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allEssays = (await getCollection('essays'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const published = allEssays.filter(e => e.data.published);
+const upcoming = allEssays.filter(e => !e.data.published);
+
+const categoryLabel: Record<string, string> = {
+  'evaluation':    'Evaluation',
+  'constraint':    'Constraint Architecture',
+  'failure-modes': 'Failure Modes',
+  'welfare':       'AI Welfare',
+};
+---
+
+<Layout
+  title="Writing | Matt Nash"
+  description="Essays on AI evaluation, constraint design, failure modes, and welfare measurement."
+>
+  <header class="mb-12">
+    <h1 class="text-3xl font-serif text-stone-900 mb-4">Writing</h1>
+    <p class="text-stone-600 text-sm leading-relaxed">
+      Essays on AI evaluation, constraint design, failure modes, and welfare measurement.
+      Published here first, crossposted to LessWrong and LinkedIn.
+    </p>
+  </header>
+
+  <!-- Filter -->
+  <div class="flex flex-wrap gap-2 mb-12" role="group" aria-label="Filter by category">
+    <button data-filter="all"           class="filter-btn active text-xs font-mono px-3 py-1.5 rounded border transition-colors">All</button>
+    <button data-filter="welfare"       class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">AI Welfare</button>
+    <button data-filter="evaluation"    class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">Evaluation</button>
+    <button data-filter="constraint"    class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">Constraint Architecture</button>
+    <button data-filter="failure-modes" class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">Failure Modes</button>
+  </div>
+
+  {published.length > 0 && (
+    <section class="mb-16" data-section="published">
+      <ul class="space-y-10" role="list">
+        {published.map((essay) => (
+          <li data-category={essay.data.category ?? 'uncategorized'}>
+            <a href={`/writing/${essay.slug}`} class="group no-underline">
+              <article class="border-b border-stone-100 pb-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <p class="text-xs text-stone-600 font-mono">
+                    {essay.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </p>
+                  {essay.data.category && (
+                    <span class="text-xs font-mono text-stone-600 bg-stone-100 px-2 py-0.5 rounded">
+                      {categoryLabel[essay.data.category]}
+                    </span>
+                  )}
+                </div>
+                <h2 class="text-xl font-serif text-stone-900 group-hover:text-indigo-700 transition-colors mb-3 leading-snug">
+                  {essay.data.title}
+                </h2>
+                <p class="text-stone-600 text-sm leading-relaxed">{essay.data.description}</p>
+              </article>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {upcoming.length > 0 && (
+    <section class={published.length > 0 ? 'pt-8 border-t border-stone-200' : ''} data-section="upcoming">
+      {published.length > 0 && (
+        <h2 class="text-xs font-mono uppercase tracking-widest text-stone-600 mb-8">Coming soon</h2>
+      )}
+      <ul class="space-y-6" role="list">
+        {upcoming.map((essay) => (
+          <li class="flex items-baseline gap-4" data-category={essay.data.category ?? 'uncategorized'}>
+            <span class="text-xs font-mono text-stone-600 shrink-0">
+              {essay.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+            </span>
+            <div>
+              <div class="flex items-center gap-2 mb-0.5">
+                <a href={`/writing/${essay.slug}`} class="text-stone-700 font-serif hover:text-indigo-700 transition-colors no-underline">{essay.data.title}</a>
+                {essay.data.category && (
+                  <span class="text-xs font-mono text-stone-500 bg-stone-100 px-2 py-0.5 rounded shrink-0">
+                    {categoryLabel[essay.data.category]}
+                  </span>
+                )}
+              </div>
+              <p class="text-stone-600 text-xs mt-1">{essay.data.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {published.length === 0 && upcoming.length === 0 && (
+    <p class="text-stone-600 text-sm">First essay publishing April 2026.</p>
+  )}
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const items = document.querySelectorAll<HTMLElement>('li[data-category]');
+  const sections = document.querySelectorAll<HTMLElement>('section[data-section]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      items.forEach(item => {
+        const show = filter === 'all' || item.dataset.category === filter;
+        item.style.display = show ? '' : 'none';
+      });
+
+      // Hide section headers when all their items are hidden
+      sections.forEach(section => {
+        const visible = section.querySelectorAll('li[data-category]:not([style*="display: none"])');
+        section.style.display = visible.length > 0 ? '' : 'none';
+      });
+    });
+  });
+</script>
+</Layout>

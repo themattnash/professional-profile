@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'I design AI systems where evaluation and constraints are the architecture, so they earn trust before reaching users.' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="AI evaluation, constraint architecture, failure mode taxonomy, AI safety, LLM evaluation, AI welfare, red teaming, evaluation methodology" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Matt Nash" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="alternate" type="application/rss+xml" title="Matt Nash | Writing" href="/rss.xml" />
+
+    <!-- DNS prefetch for external links -->
+    <link rel="dns-prefetch" href="https://builtbyearthlings.com" />
+    <link rel="dns-prefetch" href="https://linkedin.com" />
+    <link rel="dns-prefetch" href="https://github.com" />
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <!-- Skip link — WCAG 2.4.1 -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-white focus:px-4 focus:py-2 focus:text-indigo-700 focus:border focus:border-indigo-600 focus:rounded focus:text-sm focus:font-medium"
+    >
+      Skip to main content
+    </a>
+
+    <!-- Nav -->
+    <header class="border-b border-stone-200 bg-stone-50 sticky top-0 z-10">
+      <nav class="max-w-2xl mx-auto px-6 py-3 flex items-center justify-between" aria-label="Primary navigation">
+        <a href="/" class="text-stone-900 font-serif text-lg no-underline hover:text-indigo-600 transition-colors font-normal py-1">
+          Matt Nash
+        </a>
+        <ul class="flex items-center gap-1 text-sm text-stone-700" role="list">
+          <li><a href="/building" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Building</a></li>
+          <li><a href="/reading" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Reading</a></li>
+          <li><a href="/writing" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Writing</a></li>
+          <li><a href="/work" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Work</a></li>
+          <li><a href="/collaborate" class="no-underline hover:text-indigo-600 transition-colors text-stone-700 px-3 py-2 rounded hover:bg-stone-100">Let's Collaborate</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <main id="main-content" class="flex-1 max-w-2xl mx-auto w-full px-6 py-16">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-200 mt-auto" role="contentinfo">
+      <div class="max-w-2xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-stone-600">
+        <span>&copy; {new Date().getFullYear()} Matt Nash</span>
+        <a href="https://builtbyearthlings.com" class="no-underline hover:text-indigo-600 transition-colors text-stone-600 py-1" target="_blank" rel="noopener noreferrer">
+          Built by Earthlings
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

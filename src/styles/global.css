@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-stone-50 text-stone-900 antialiased;
+  }
+
+  body {
+    @apply text-base leading-relaxed;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    @apply font-normal tracking-tight;
+  }
+
+  a {
+    @apply text-indigo-600 hover:text-indigo-800 transition-colors;
+  }
+
+  p {
+    @apply text-stone-700;
+  }
+
+  /* Global focus indicator — WCAG 2.2 SC 2.4.11 */
+  :focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .filter-btn {
+    @apply text-stone-600 border-stone-300 bg-white;
+  }
+
+  .filter-btn:hover {
+    @apply border-indigo-400 text-indigo-600;
+  }
+
+  .filter-btn.active {
+    @apply bg-indigo-50 border-indigo-300 text-indigo-700;
+  }
+
+
+  .prose-content h2 {
+    @apply text-xl font-serif text-stone-900 mt-10 mb-4;
+  }
+
+  .prose-content p {
+    @apply mb-5 text-stone-700 leading-[1.75];
+  }
+
+  .prose-content strong {
+    @apply text-stone-900 font-semibold;
+  }
+
+  .prose-content ul {
+    @apply list-disc pl-6 mb-5 space-y-1 text-stone-700;
+  }
+
+  .prose-content a {
+    @apply text-indigo-600 hover:text-indigo-800 underline underline-offset-2;
+  }
+}

@@ -1,0 +1,61 @@
+---
+title: "Accuracy Is the Floor, Not the Ceiling"
+date: 2026-04-15
+description: "Why 93% accuracy still leaves the failure boundary unknown, and what calibration, constraint adherence, and consequential error rate actually measure."
+published: false
+category: "evaluation"
+---
+
+## The 93% Problem
+
+A team ships an AI system with 93% accuracy on its evaluation set. The launch goes well. Three months later, production failure analysis shows the system is wrong on a specific class of queries at a much higher rate, but no one knew because those queries were never disaggregated. The aggregate accuracy never moved.
+
+This is not a story about a bad evaluation. The team measured what they said they would measure, and the system passed. It is a story about what accuracy, correctly measured, still does not tell you.
+
+Accuracy is the proportion of outputs that are correct across the cases tested. It answers one question: on the cases we evaluated, how often was the system right? That question matters. But the failure modes that cause real production problems live in questions accuracy does not ask: Was the system confident when it was wrong? Were the failures concentrated in the queries that carry the most consequence? Did the system stay within its intended scope?
+
+Accuracy is a necessary condition for a trustworthy AI system. It is not a sufficient one.
+
+## What Accuracy Does Not Measure
+
+The problem is not that teams measure accuracy. The problem is that accuracy marks a system as "evaluated" when it has only been confirmed functional on the cases tested. Three gaps are consistently invisible to it.
+
+**Calibration.** A system that is wrong on 7% of cases is a known quantity. A system that is wrong on 7% of cases and expresses high confidence on those wrong cases is a different kind of problem. The dangerous failure state is not low accuracy paired with low confidence. That is recoverable, because the system signals its uncertainty and humans can verify. The dangerous state is high accuracy paired with overconfidence in the tail. Users learn to trust the confidence signal, and then on the queries where the system is wrong and confident, there is no friction. The high-confidence score passes cleanly to whatever depends on it downstream.
+
+Kadavath et al. (Anthropic, 2022) found that models are reasonably well-calibrated on structured tasks in-distribution, but calibration degrades on out-of-distribution task types and on questions that include abstention options. The cases where calibration fails most are exactly the cases most likely to appear in production distribution tails.
+
+**Constraint adherence.** A customer support assistant answers a user's question about headache remedies: hydrate, try ibuprofen, see a doctor if it persists. The advice is medically reasonable. A correctness evaluator might score it as accurate. The system is also completely out of scope, with no business giving medical advice. Correctness evaluation passes. The constraint violation is invisible to it. These are separate measurements because they measure separate properties. A system can be accurate and out of scope simultaneously.
+
+**Consequential error rate.** Aggregate accuracy is an average. Averages hide tails. A system that is 95% accurate overall can be 40% accurate on the 5% of queries that carry the most consequence, if those queries were underrepresented in the evaluation set and were never disaggregated in the report. The first signal of this failure is usually an escalation wave, not a metric.
+
+## What This Looks Like in Practice
+
+A customer support AI handling billing disputes scores 94% accuracy in evaluation. Its error rate on account termination queries (1% of total volume, 100% of escalation risk) was never measured separately. The evaluation set had included three account termination cases. Three cases does not produce a meaningful error rate. The problem was invisible until production revealed it.
+
+On the calibration side: a recent calibration run on a Q&A system produced an Expected Calibration Error of 0.367. The bin breakdown showed the failure directly. In the 0.80-0.90 confidence band, the system's average stated confidence was 0.853 and its actual accuracy was 0.333. The system expressed high confidence on queries where it was wrong two-thirds of the time. The aggregate accuracy score gave no signal about where in the confidence distribution the failures were concentrated. The bin breakdown did. This is what calibration measurement is for, not to replace accuracy, but to reveal the failure pattern accuracy hides.
+
+## A More Complete Measurement Set
+
+These three measurements belong alongside accuracy in any serious evaluation.
+
+**Calibration error.** Compute ECE across confidence bins. Look at the breakdown, not just the summary score. Calibration must also be re-evaluated each time the deployment task distribution shifts. A calibration score from the test set does not transfer to the production distribution.
+
+**Consequential error rate.** Before evaluation, identify which query types are high-consequence in the deployment context. Ensure those types have enough representation in the case set to produce meaningful disaggregated rates (not 3 cases, but 40 or more). Report their error rate separately from the aggregate.
+
+**Constraint adherence rate.** Define, before evaluation, what the system should not do. Scope violations, out-of-scope accurate responses, and refusals that should not be refusals are each invisible to accuracy measurement. Test for them explicitly.
+
+## What Remains Hard
+
+The hardest problem is defining "high-consequence" before deployment. In a new system, you often do not know which query types will carry the most consequence until you have seen production traffic. Consequential error rate requires a judgment call about risk that the evaluation team must make in advance, with imperfect information.
+
+Calibration measurement is also straightforward when models expose confidence scores. Many production systems do not. Deriving meaningful calibration signals from systems that return only outputs (not probabilities) is an open problem without a clean solution.
+
+Neither difficulty is a reason to skip the measurements. They are reasons to treat the first version of any evaluation as provisional, and to plan for re-evaluation when production data reveals what the test set did not.
+
+---
+
+A system with a 94% accuracy score and no further measurement has an unknown failure boundary. You know it fails 6% of the time in aggregate, and nothing about where, when, or with what confidence those failures occur.
+
+A system with an 89% accuracy score, a measured calibration error of 0.04, a 91% pass rate on high-stakes queries, and a documented tail failure mode has a known failure boundary. That system is safer to deploy, not because it scores better, but because its failure modes are named and can be managed.
+
+Accuracy tells you the system works. The other metrics tell you when it won't.

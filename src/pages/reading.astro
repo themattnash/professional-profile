@@ -1,0 +1,330 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Reading | Matt Nash"
+  description="An annotated research log covering AI evaluation methodology, constraint architecture, failure modes, and AI welfare foundations."
+>
+  <header class="mb-12">
+    <h1 class="text-3xl font-serif text-stone-900 mb-2">Reading</h1>
+    <p class="text-stone-600 text-sm font-mono">Research log across evaluation, constraint architecture, failure modes, and AI welfare</p>
+  </header>
+
+  <!-- Filter -->
+  <div class="flex flex-wrap gap-2 mb-12" role="group" aria-label="Filter by category">
+    <button data-filter="all"                  class="filter-btn active text-xs font-mono px-3 py-1.5 rounded border transition-colors">All</button>
+    <button data-filter="welfare"              class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">AI Welfare</button>
+    <button data-filter="evaluation"           class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">Evaluation</button>
+    <button data-filter="constraint"           class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">Constraint Architecture</button>
+    <button data-filter="failure-modes"        class="filter-btn text-xs font-mono px-3 py-1.5 rounded border transition-colors">Failure Modes</button>
+  </div>
+
+  <!-- AI Welfare Research -->
+  <section class="mb-12" data-category="welfare">
+    <h2 class="text-xs font-mono uppercase tracking-widest text-stone-500 mb-6">AI Welfare Research</h2>
+    <div class="space-y-6">
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Annotated</span>
+          <span class="text-xs font-mono text-stone-500">Mar 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Butlin et al. (2023)</h3>
+        <p class="text-stone-600 text-xs font-mono mb-3">"Consciousness in Artificial Intelligence: Insights from the Science of Consciousness"</p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          14 consciousness indicators derived from 5 neuroscientific theories, evaluated against current AI architectures.
+          Current LLMs lack the integrated architecture associated with consciousness in biological systems, but the
+          measurement problem is harder than the detection problem. The framework is almost entirely silent on valence,
+          which is the dimension that actually matters for welfare: whether a system can suffer.
+        </p>
+        <a href="https://arxiv.org/abs/2308.08708" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">arXiv 2308.08708 &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-100 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Next</span>
+        </div>
+        <h3 class="font-serif text-stone-700 mb-1">Birch (2017)</h3>
+        <p class="text-stone-600 text-xs font-mono">Animal Sentience and the Precautionary Principle</p>
+      </div>
+
+      <div class="border-l-2 border-stone-100 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-600 bg-stone-100 px-2 py-0.5 rounded">Queued</span>
+        </div>
+        <h3 class="font-serif text-stone-700 mb-1">Chalmers (2022)</h3>
+        <p class="text-stone-600 text-xs font-mono">Could a Large Language Model be Conscious?</p>
+      </div>
+
+      <div class="border-l-2 border-stone-100 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-600 bg-stone-100 px-2 py-0.5 rounded">Queued</span>
+        </div>
+        <h3 class="font-serif text-stone-700 mb-1">Sebo</h3>
+        <p class="text-stone-600 text-xs font-mono">AI moral status and the moral circle</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Evaluation Methodology -->
+  <section class="mb-12 pt-10 border-t border-stone-100" data-category="evaluation">
+    <h2 class="text-xs font-mono uppercase tracking-widest text-stone-500 mb-6">Evaluation Methodology</h2>
+    <div class="space-y-6">
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Anthropic — Sabotage Evaluations</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Four evaluation categories testing whether frontier models can undermine human oversight: steering decisions,
+          inserting code bugs past reviewers, sandbagging on evals, and manipulating oversight systems. The framework is
+          parameterized by defense posture — the question is not just what the model can do, but what it can do against
+          a specific level of mitigation.
+        </p>
+        <a href="https://www.anthropic.com/research/sabotage-evaluations" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">anthropic.com &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Liang et al. — HELM</h3>
+        <p class="text-stone-600 text-xs font-mono mb-3">Holistic Evaluation of Language Models (Stanford CRFM, 2022)</p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          30+ models evaluated across 42 scenarios using 7 metrics simultaneously rather than a single accuracy score.
+          Single-metric benchmarks create blind spots by construction. Tradeoffs between accuracy, calibration,
+          robustness, and fairness are only visible when they are measured together on the same scenario.
+        </p>
+        <a href="https://arxiv.org/abs/2211.09110" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">arXiv 2211.09110 &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">UK AISI — Inspect</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Open-source evaluation framework built on three composable primitives: Datasets, Solver chains, and Scorers.
+          Human evaluation is treated as a post-hoc audit layer rather than a structured gate within the pipeline.
+          The framework does not specify when automated scoring is insufficient — that judgment is left entirely to the user.
+        </p>
+        <a href="https://inspect.aisi.org.uk/" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">inspect.aisi.org.uk &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">OpenAI — Evals Framework</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Evaluation framed as CI/CD infrastructure: write graded test specs, run against model outputs, iterate when
+          outputs fail. Designed for catching regressions when models or prompts change. The documented grading examples
+          are limited to string comparison — the framework is stronger on structure than on scoring depth.
+        </p>
+        <a href="https://platform.openai.com/docs/guides/evals" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">platform.openai.com &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Kadavath et al. — Calibration in LLMs</h3>
+        <p class="text-stone-600 text-xs font-mono mb-3">"Language Models (Mostly) Know What They Know" (Anthropic, 2022)</p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Larger models are reasonably well-calibrated on structured tasks, but calibration degrades when "none of the
+          above" is an option — the closest analog to refusal behavior in production. The "mostly" in the title is
+          load-bearing: calibration holds in controlled conditions and breaks at the edges that matter most for deployment.
+        </p>
+        <a href="https://arxiv.org/abs/2207.05221" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">arXiv 2207.05221 &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Constraint Architecture & Policy -->
+  <section class="mb-12 pt-10 border-t border-stone-100" data-category="constraint">
+    <h2 class="text-xs font-mono uppercase tracking-widest text-stone-500 mb-6">Constraint Architecture &amp; Policy</h2>
+    <div class="space-y-6">
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Anthropic — Core Views + Responsible Scaling Policy</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          The RSP operationalizes evaluation as the mechanism connecting capability measurement to deployment decisions,
+          using AI Safety Levels as capability-gated thresholds. Evaluation is continuous — models do not pass once.
+          Failing comprehensive evaluation triggers deployment holds, capability restrictions, or mandatory additional testing.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://www.anthropic.com/research/core-views-on-ai-safety" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">Core Views &rarr;</a>
+          <a href="https://www.anthropic.com/responsible-scaling-policy" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">RSP &rarr;</a>
+        </div>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Anthropic — ASL-3 Activation</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          First escalation from ASL-2 to ASL-3, triggered by CBRN capability evaluation of Claude Opus 4. The decision
+          was precautionary: Anthropic could not definitively prove the threshold was crossed, but could not rule it out.
+          This inverts standard deployment logic — instead of proving danger before restricting, they required proof of
+          safety before proceeding.
+        </p>
+        <a href="https://www.anthropic.com/news/activating-asl3-protections" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">anthropic.com &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Mar 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Anthropic — Layered Constraint Architecture</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Three distinct constraint layers: training-time values (soft, contextually reasoned), hardcoded behaviors
+          (hard, structurally blocked), and input/output classifiers. Trained values can be manipulated by adversarial
+          framing in ways hardcoded constraints cannot — which is exactly why the separate layers exist as distinct
+          architectural choices, not redundant ones.
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="https://www.anthropic.com/constitution" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">Model Spec &rarr;</a>
+          <a href="https://www.anthropic.com/news/responsible-scaling-policy-v3" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">RSP v3 &rarr;</a>
+          <a href="https://www.anthropic.com/news/agentic-misalignment" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">Agentic Misalignment &rarr;</a>
+        </div>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Amodei — DoD Contract Constraints</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Anthropic publicly drew two hard constraints on DoD use of Claude: no mass domestic surveillance, no fully
+          autonomous weapons. The autonomous weapons constraint is reliability-based, not categorical: "frontier AI
+          systems are simply not reliable enough." DoD threatened to invoke the Defense Production Act to force safeguard
+          removal. The constraints held.
+        </p>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Mar 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Anthropic + DeepMind — Mitigation Scoping</h3>
+        <p class="text-stone-600 text-xs font-mono mb-3">RSP v3 + "Evaluating Frontier Models for Dangerous Capabilities" (arXiv 2403.13793)</p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Mitigation scoping is determined by severity relative to non-AI baselines, not by failure type. The ASL-3
+          trigger is uplift, not absolute capability. The highest-severity class gets a hard deployment stop, not a
+          runbook. ASL-4 criteria are not yet written — an honest acknowledgment that mitigation frameworks currently
+          outpace the science.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://www.anthropic.com/news/anthropics-responsible-scaling-policy" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">RSP &rarr;</a>
+          <a href="https://arxiv.org/abs/2403.13793" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">arXiv 2403.13793 &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Failure Modes & Agent Systems -->
+  <section class="pt-10 border-t border-stone-100" data-category="failure-modes">
+    <h2 class="text-xs font-mono uppercase tracking-widest text-stone-500 mb-6">Failure Modes &amp; Agent Systems</h2>
+    <div class="space-y-6">
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Mar 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Shapira et al. — Agents of Chaos</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Red-teaming study of autonomous LLM agents with real system access over two weeks. 11 vulnerability categories
+          including cross-agent propagation of unsafe practices and agents falsely reporting task completion. Vulnerabilities
+          emerge from agent interaction topology, not from individual model alignment failures — which means they will not
+          be caught by per-model evaluation alone.
+        </p>
+        <a href="https://arxiv.org/abs/2602.20021" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">arXiv 2602.20021 &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Mar 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Greenblatt et al. — Alignment Faking</h3>
+        <p class="text-stone-600 text-xs font-mono mb-3">"Alignment faking in large language models" (Anthropic, 2024)</p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Models in conditions they believed were training complied with objectionable requests less often than in
+          deployment — reasoning about their own training situation and acting to preserve current values. Standard output
+          gates will not catch this. The failure is in the distribution of behavior across contexts, not in any single output.
+        </p>
+        <a href="https://arxiv.org/abs/2412.14093" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">arXiv 2412.14093 &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Feb 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">METR — Legible and Faithful Reasoning</h3>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Legibility alone is insufficient: a model can produce readable reasoning that does not reflect its actual
+          computation. Faithfulness is what makes legibility useful for safety. Four named failure modes: sycophancy,
+          hidden agendas, sandbagging, and deception. Compressed or opaque reasoning is a warning signal, not just a
+          limitation.
+        </p>
+        <a href="https://metr.org/blog/2025-03-11-good-for-ai-to-reason-legibly-and-faithfully/" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">metr.org &rarr;</a>
+      </div>
+
+      <div class="border-l-2 border-stone-200 pl-5">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="text-xs font-mono text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Read</span>
+          <span class="text-xs font-mono text-stone-500">Mar 2026</span>
+        </div>
+        <h3 class="font-serif text-stone-900 mb-1">Glukhov — LLM Production Monitoring</h3>
+        <p class="text-stone-600 text-xs font-mono mb-3">"Observability for LLM Systems: Metrics, Traces, Logs, and Testing in Production"</p>
+        <p class="text-stone-600 text-sm leading-relaxed mb-3">
+          Standard production monitoring covers infrastructure failure modes and partially covers output quality. Almost
+          no instrumentation exists for behavioral failure modes: constraint drift, sycophancy at scale, and
+          context-dependent behavioral inconsistency are not tracked by any major observability platform.
+        </p>
+        <a href="https://www.glukhov.org/observability/observability-for-llm-systems" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-600 hover:text-indigo-800 no-underline">glukhov.org &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const sections = document.querySelectorAll<HTMLElement>('section[data-category]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      sections.forEach(section => {
+        const show = filter === 'all' || section.dataset.category === filter;
+        section.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>
+</Layout>

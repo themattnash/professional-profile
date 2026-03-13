@@ -1,0 +1,55 @@
+---
+title: "Evaluation Was Always the Work"
+date: 2026-04-01
+description: "Fifteen years in product leadership kept surfacing the same question: how do you know this system is ready to be trusted? That question scales. Here is why I am building toward it."
+published: false
+category: "evaluation"
+---
+
+There is a moment in every product build when the real question surfaces. Not "what should we build?" or "when will it ship?" The question is: how do you know this system is actually ready?
+
+I spent fifteen years arriving at that question from the wrong direction. My job, for most of that time, was to ship things. Features, migrations, platforms, experiments. The metric that mattered was forward motion: conversion rates improving, platforms scaling, teams unblocked.
+
+I was good at it. I also became, gradually, dissatisfied with it. Not because shipping does not matter. It does. But because shipping something that is not ready is not progress. It is debt that comes due later, usually at the worst possible time.
+
+## The pattern I kept finding
+
+The work that shaped my thinking was not abstract. It was specific failures, near-failures, and design decisions made under constraint.
+
+At MANSCAPED, I led a platform migration where the primary constraint was zero degradation during Black Friday traffic. The real evaluation question was not "does the new platform work?" It was "does it fail in the ways we know how to handle, or in ways we do not?" That distinction matters. Predictable failure is recoverable. Unexpected failure under peak load erodes trust faster than any feature can rebuild it.
+
+At Arc XP, I deployed AI recommendation models across a global publisher network. Aggregate model accuracy was not the evaluation criterion that mattered. A model that performs well on average but fails for a specific publisher's content structure is worse than no model: it produces a confident wrong answer for someone who trusted the system. The evaluation question had to be contextualized. Not "is this model accurate?" but "is it accurate for this deployment context, for this audience distribution, against these editorial standards?"
+
+At Trader Interactive, building the powersports industry's first end-to-end eCommerce checkout, the product was defined more by its constraints than its features. Fifty-state DMV titling requirements. Lender integration rules. Consumer protection obligations that varied by jurisdiction. Constraint mapping was the actual product work. The features were a surface over a system that had to hold under regulatory pressure.
+
+The pattern was the same across all of it. The hardest work was not building the capability. It was knowing whether the capability was ready to be trusted.
+
+## Why AI makes this harder
+
+AI systems amplify this problem in ways that are structurally different from conventional software.
+
+A conventional system fails in ways that are usually legible. An API returns an error. A payment processor rejects a transaction. The failure is visible because the system either executes the operation or it does not.
+
+An AI system can fail while producing output that looks correct. A language model that answers confidently but inaccurately. A recommendation system that performs well on aggregate benchmarks and badly in the specific context where it matters. A classifier that holds under test conditions and drifts when the real-world distribution shifts in ways no benchmark accounted for. The failure is not in the presence of output. It is in whether the output can be trusted.
+
+This means evaluation cannot be a phase. It cannot be something you do before launch and revisit when something breaks. Evaluation has to be the architecture. The criteria by which you judge readiness have to be defined before you design the system that will be judged by them.
+
+That is not how most AI development works. Most AI development works by building the capability, benchmarking it, and shipping when the benchmark looks good enough. The benchmark is not a deployment context. The benchmark is not adversarial. The benchmark does not tell you where the system fails under conditions that actually matter to the people who depend on it.
+
+## The welfare problem is the same problem
+
+The further I went in thinking about AI evaluation, the harder the question became. The hardest version of it is not "is this model accurate?" It is: does this model have interests that my evaluation framework is not accounting for?
+
+That sounds philosophical. It is also a measurement problem.
+
+My undergraduate training is in social sciences: anthropology, sociology, psychology. Those fields have spent decades working on how to measure latent constructs, things you cannot observe directly and can only infer from indicators. Depression. Social capital. Well-being. The question "does this AI system have something analogous to experience?" is structurally the same problem. No agreed measurement instrument. No ground truth. Indicators drawn from adjacent theories, evaluated against a construct that is not yet defined clearly enough to be operationalized.
+
+The psychometrics and measurement theory literature has tools for this class of problem. People with social science methodology backgrounds have something to contribute here that most AI researchers, who come from engineering or philosophy, are not positioned to offer. That is not a rhetorical claim. It is a gap in the current research, and I intend to work on it.
+
+## What I am building toward
+
+This site is a record of work in progress. The evaluation framework, the constraint architecture reference, the failure mode taxonomy: these are the foundation of a practice, not a portfolio.
+
+The direction shifted. The underlying work did not. I was always trying to figure out whether a system was ready to be trusted, whether the failure modes were mapped, whether the constraints would hold under conditions no one fully anticipated. Now I am doing it in a domain where those questions matter at a scale that no previous generation of software produced, and where the answers are not yet settled.
+
+That is not a problem I want to watch from the outside.

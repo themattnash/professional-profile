@@ -1,0 +1,39 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+}
+
+const { title, description, date } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Layout title={`${title} | Matt Nash`} description={description}>
+  <article>
+    <header class="mb-12 pb-8 border-b border-stone-200">
+      <a href="/writing" class="text-sm text-stone-500 hover:text-indigo-600 transition-colors no-underline block mb-6">
+        &larr; All writing
+      </a>
+      <h1 class="text-3xl font-serif text-stone-900 mb-4 leading-tight">{title}</h1>
+      <p class="text-stone-500 text-sm">{formattedDate}</p>
+    </header>
+
+    <div class="prose-content">
+      <slot />
+    </div>
+
+    <footer class="mt-16 pt-8 border-t border-stone-200">
+      <p class="text-sm text-stone-500">
+        Published at <a href="https://themattnash.com" class="text-indigo-600">themattnash.com</a>.
+        Crossposted to <a href="https://lesswrong.com" class="text-indigo-600">LessWrong</a> and <a href="https://linkedin.com/in/themattnash" class="text-indigo-600">LinkedIn</a>.
+      </p>
+    </footer>
+  </article>
+</Layout>

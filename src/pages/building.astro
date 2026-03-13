@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Building | Matt Nash"
+  description="Active work across evaluation frameworks, constraint architecture, adversarial eval tooling, and AI welfare research."
+>
+  <header class="mb-12">
+    <h1 class="text-3xl font-serif text-stone-900 mb-2">Building</h1>
+    <p class="text-stone-600 text-sm font-mono">Last updated March 2026</p>
+  </header>
+
+  <div class="space-y-8">
+
+    <div class="border-l-2 border-stone-200 pl-5">
+      <div class="flex items-center gap-3 mb-2">
+        <h2 class="font-serif text-stone-900">
+          <a href="https://github.com/themattnash/llm-readiness-platform" target="_blank" rel="noopener noreferrer" class="no-underline hover:text-indigo-700 transition-colors">llm-readiness-platform</a>
+        </h2>
+        <span class="text-xs font-mono text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Complete</span>
+      </div>
+      <p class="text-stone-600 text-sm leading-relaxed">
+        Evaluation framework for LLM-powered features: structured testing, output scoring, and drift
+        detection. Eval philosophy, evaluation principles, and metrics taxonomy (7 classes) finalized.
+        Working eval harness at v0.2 with ExactMatch, Refusal, and Calibration evaluator classes.
+      </p>
+    </div>
+
+    <div class="border-l-2 border-stone-200 pl-5">
+      <div class="flex items-center gap-3 mb-2">
+        <h2 class="font-serif text-stone-900">
+          <a href="https://github.com/themattnash/constraint-architecture" target="_blank" rel="noopener noreferrer" class="no-underline hover:text-indigo-700 transition-colors">constraint-architecture</a>
+        </h2>
+        <span class="text-xs font-mono text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Complete</span>
+      </div>
+      <p class="text-stone-600 text-sm leading-relaxed">
+        Reference framework for embedding human judgment, gates, and enforcement layers into AI systems.
+        Covers gate taxonomy, guardrail vs. constraint distinction, human judgment layer design, trust
+        boundaries, conflict resolution, audit surface, and multi-agent constraint systems.
+      </p>
+    </div>
+
+    <div class="border-l-2 border-stone-200 pl-5">
+      <div class="flex items-center gap-3 mb-2">
+        <h2 class="font-serif text-stone-900">
+          <a href="https://github.com/themattnash/ai-failure-taxonomy" target="_blank" rel="noopener noreferrer" class="no-underline hover:text-indigo-700 transition-colors">ai-failure-taxonomy</a>
+        </h2>
+        <span class="text-xs font-mono text-amber-800 bg-amber-100 px-2 py-0.5 rounded">In progress</span>
+      </div>
+      <p class="text-stone-600 text-sm leading-relaxed">
+        Structured taxonomy of AI system failure modes with detection patterns and mitigation playbooks.
+        Taxonomy and detection patterns complete across all 9 classes. Mitigation playbooks complete
+        for 5 priority classes. Remaining 4 classes in progress.
+      </p>
+    </div>
+
+    <div class="border-l-2 border-stone-200 pl-5">
+      <div class="flex items-center gap-3 mb-2">
+        <h2 class="font-serif text-stone-900">
+          <a href="https://github.com/themattnash/adversarial-eval-tool" target="_blank" rel="noopener noreferrer" class="no-underline hover:text-indigo-700 transition-colors">adversarial-eval-tool</a>
+        </h2>
+        <span class="text-xs font-mono text-stone-700 bg-stone-200 px-2 py-0.5 rounded">Scoping</span>
+      </div>
+      <p class="text-stone-600 text-sm leading-relaxed">
+        Open-source tool for probing LLM behavioral boundaries and surfacing failure modes. Designed
+        to find what standard benchmarks miss. Architecture phase begins April 2026.
+      </p>
+    </div>
+
+  </div>
+</Layout>

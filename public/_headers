@@ -1,8 +1,7 @@
-# Optional: effective on Netlify/Cloudflare Pages (not GitHub Pages)
-# Long-lived caching for hashed assets; HTML stays no-cache
-/professional-profile/assets/*
+# Immutable cache for hashed Astro assets (fingerprinted filenames, safe to cache forever)
+/_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# HTML and RSS: always revalidate
 /*
-  Cache-Control: no-cache
-
+  Cache-Control: no-cache, must-revalidate
