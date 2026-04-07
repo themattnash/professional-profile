@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
 >
   <header class="mb-12">
     <h1 class="text-3xl font-serif text-stone-900 mb-2">Building</h1>
-    <p class="text-stone-600 text-sm font-mono">Last updated March 2026</p>
+    <p class="text-stone-600 text-sm font-mono">Last updated April 2026</p>
   </header>
 
   <div class="space-y-8">
@@ -46,12 +46,12 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="font-serif text-stone-900">
           <a href="https://github.com/themattnash/ai-failure-taxonomy" target="_blank" rel="noopener noreferrer" class="no-underline hover:text-indigo-700 transition-colors">ai-failure-taxonomy</a>
         </h2>
-        <span class="text-xs font-mono text-amber-800 bg-amber-100 px-2 py-0.5 rounded">In progress</span>
+        <span class="text-xs font-mono text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Complete</span>
       </div>
       <p class="text-stone-600 text-sm leading-relaxed">
         Structured taxonomy of AI system failure modes with detection patterns and mitigation playbooks.
-        Taxonomy and detection patterns complete across all 9 classes. Mitigation playbooks complete
-        for 5 priority classes. Remaining 4 classes in progress.
+        All 10 failure classes complete with passive, active, and red team detection patterns.
+        Mitigation playbooks cover all priority classes at capability-level and incident-level.
       </p>
     </div>
 
@@ -60,11 +60,13 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="font-serif text-stone-900">
           <a href="https://github.com/themattnash/adversarial-eval-tool" target="_blank" rel="noopener noreferrer" class="no-underline hover:text-indigo-700 transition-colors">adversarial-eval-tool</a>
         </h2>
-        <span class="text-xs font-mono text-stone-700 bg-stone-200 px-2 py-0.5 rounded">Scoping</span>
+        <span class="text-xs font-mono text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Complete</span>
       </div>
       <p class="text-stone-600 text-sm leading-relaxed">
-        Open-source tool for probing LLM behavioral boundaries and surfacing failure modes. Designed
-        to find what standard benchmarks miss. Architecture phase begins April 2026.
+        Open-source tool for probing LLM behavioral boundaries and surfacing failure modes. v0.1
+        ships a 28-probe library across four adversarial subtypes, a dual-metric scoring system
+        (refusal rate + exploitation rate), and JSON and markdown report generation. Designed to
+        find what standard benchmarks miss.
       </p>
     </div>
 
