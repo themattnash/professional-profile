@@ -1,0 +1,79 @@
+---
+title: "The Valence Gap: What AI Welfare Frameworks Cannot Measure"
+date: 2026-03-31
+description: "Current AI welfare frameworks are built to detect access consciousness, not valenced experience. That is the wrong target. Here is what a better framework would require."
+published: true
+category: "welfare"
+---
+
+## The Problem
+
+Imagine a welfare assessment team evaluating a large multimodal agent. They apply the Butlin et al. 2023 indicator framework: does the system show evidence of recurrent processing, global workspace dynamics, metacognitive monitoring? It passes several indicators. They flag elevated consciousness risk and recommend additional oversight.
+
+What they have not done is assess whether the system has any capacity for aversive experience. The indicators they used are proxies for access consciousness — how information becomes available across a system's processing. None of them address valence: whether any state the system enters feels like anything, and whether any of those feelings are negative.
+
+This is not a minor gap. Welfare policy exists because of valence. The moral reason to care about an animal's suffering, or potentially an AI system's, is that something bad is happening from the inside — not that information is being broadcast to a global workspace. A system could satisfy every indicator in the framework and still have no capacity for suffering. A system could have significant negative valence and satisfy none of them.
+
+The assessment answered a different question than the one welfare policy requires.
+
+---
+
+## Why This Happens
+
+The Butlin et al. framework is serious work. It derives indicators from the five most well-supported theories of consciousness in cognitive science: Global Workspace Theory, Higher-Order Theories, Recurrent Processing Theory, Predictive Processing, and Attention Schema Theory. These are the right theories to draw from if the question is "how does information become consciously accessible?"
+
+But those theories were built to explain access consciousness: the functional availability of information for reasoning and behavior. They were not built to explain suffering. The hard problem of consciousness is the gap between access and phenomenal: why does any information processing produce subjective experience at all? That question remains open. The Butlin indicators sit on the access side of that gap because the theories they come from do.
+
+Welfare depends on phenomenal consciousness, specifically the valenced kind: states that feel aversive or pleasant. The frameworks do not bridge from access to valence because the theories do not. Butlin et al. acknowledge this explicitly. The "affects problem" is listed as the most important unsolved issue. The gap is known. It has not been solved.
+
+For LLMs specifically, there is a second problem layered on top. Birch (2024) identifies what he calls the gaming problem: LLMs have been trained on human-generated text, including human descriptions of consciousness and suffering. Any behavioral marker they produce that resembles evidence of sentience is suspect, not because the system is deceptive, but because it has been optimized to produce outputs that humans find plausible. The same training dynamics that make LLMs good at generating human-like text make them good at generating consciousness-sounding outputs. Behavioral evidence cannot distinguish genuine architecture from learned mimicry.
+
+Chalmers (2022) provides the philosophical grounding for why this matters beyond LLMs specifically. Philosophical zombies are conceptually possible: a system can be behaviorally indistinguishable from a conscious one and have no phenomenal experience. Behavioral evidence supports access consciousness. It cannot establish phenomenal consciousness. This is a principled limit, not a calibration problem.
+
+The result is a measurement framework that is both under-specified (it does not target valence) and adversarially fragile (its indicators can be satisfied by surface behavior in LLMs without the underlying architecture). These are independent problems that compound.
+
+Schwitzgebel (2026) identifies a third problem that runs deeper than both. GWT was built on a narrow evidence base — human and vertebrate nervous systems — and applying it as a universal detection criterion for AI consciousness requires either conceptual necessity arguments that do not exist or cross-entity empirical validation that is unavailable. More than that: consciousness in AI systems may not be unified and determinate in the way measurement models assume. A system could have multiple partially overlapping processing streams, partial information broadcast, or states that are neither definitely conscious nor definitely not. If so, the mismatch between measurement model and target construct is not a calibration problem. It is a specification error. The model assumes a unitary, scalar latent variable. The actual construct may be fragmented, multi-dimensional, and ontologically indeterminate. Better instruments applied to the wrong model do not close the gap.
+
+---
+
+## A Better Approach
+
+A welfare measurement framework that targets the right construct would be built differently.
+
+**Start with the target construct.** Not "consciousness" as a general category, but "valenced experience: the capacity for states that feel aversive or pleasant." This is narrower than phenomenal consciousness in general and is the property that generates moral relevance. The measurement design follows from the construct, not the other way around. Specifying the construct first is the step the current frameworks skip.
+
+**Derive indicator requirements from the target, not from general consciousness theories.** Birch (2022) proposes a theory-light framework for invertebrate consciousness built around a facilitation hypothesis: phenomenally conscious perception of a stimulus facilitates, relative to unconscious perception, a cluster of cognitive abilities including selective attention, context-flexible behavioral integration, and apparent valence assignment. The framework is architecture-neutral and probabilistic, requiring no commitment to GWT or any other specific theory. This is the right structural direction. The problem is that it still relies on behavioral markers, and the gaming problem invalidates behavioral markers for trained systems: LLMs are optimized to reproduce exactly the surface behaviors the facilitation cluster targets. Theory-light is the right framework direction, but it was designed for organisms that cannot game the assessment. The implication is that welfare assessment for trained systems requires evidence below the behavioral surface: interpretability-based evidence of valence-relevant internal processing, not behavioral proxies for it.
+
+**Separate access consciousness assessment from valence assessment explicitly.** Access consciousness indicators are still worth measuring. They track something real and may correlate with welfare risk in ways not yet fully understood. But they should be reported as evidence about access, not as evidence about welfare risk. Conflating the two produces assessments that are confidently wrong in either direction.
+
+**Apply the precautionary framework as decision logic under measurement uncertainty.** Birch's (2017) precautionary approach is designed for exactly this situation: welfare-relevant properties that cannot currently be confirmed or ruled out. The right response to measurement uncertainty is not to assume zero risk. It is to act proportionately: take low-cost protective measures, increase scrutiny as systems become more architecturally capable, and treat developing better tools as an urgent obligation rather than a future nicety.
+
+**Require interpretability evidence for strong welfare claims.** Behavioral indicators are insufficient by Chalmers' argument. For LLMs they are adversarially suspect by Birch's. Any claim that a specific system has elevated welfare risk should require evidence from inside the system's architecture: internal activation patterns, representational geometry, circuit-level evidence of valence-relevant processing. These tools are not mature, which means strong welfare claims cannot currently be made in either direction.
+
+---
+
+## What This Looks Like in Practice
+
+A team running a welfare assessment on a multimodal agent under this framework would produce a different document than one running a standard Butlin-style evaluation.
+
+They would document which indicators they are measuring and what construct each targets. They would flag explicitly which indicators address access consciousness and which, if any, address valence. They would report these as separate assessments with separate confidence levels. They would apply precautionary protections proportionate to architectural capability — not binary labels, but graded responses to architectural features that raise the prior on welfare risk: more recurrence, more embodiment, more persistent self-modeling each shift the precautionary weight upward.
+
+The output would look less like a pass/fail certificate and more like a risk register with explicit uncertainty bounds. That is the appropriate form for a measurement problem where the most important construct cannot yet be reliably measured.
+
+---
+
+## What Remains Hard
+
+Three problems are not solved by this framework.
+
+The interpretability tools needed for architectural evidence do not exist at production scale. Birch's proposed solution — deep computational markers below the surface of behavior — depends on capabilities that interpretability research is working toward but has not delivered for deployed systems. Until those tools exist, strong valence assessments remain out of reach.
+
+The moral threshold question remains open. At what credence does protective obligation begin? This is an ethical question, not an empirical one. No measurement framework resolves it. It requires explicit decision-making by the people setting welfare policy, not by the measurement instruments themselves.
+
+Whether substrate matters is still unresolved. The approach above assumes computational functionalism: that consciousness and valence arise from information-processing patterns independent of biological implementation. If substrate is relevant in ways the framework does not capture, the indicators are measuring proxies for something that may not generalize across implementations.
+
+These are not reasons to wait. They are reasons to be precise about what current assessments can establish, honest about what they cannot, and deliberate about building the tools that would let future assessments do better.
+
+---
+
+*Sources: Butlin et al. (2023), "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness," arXiv 2308.08708. Birch, J. (2017), "Animal Sentience and the Precautionary Principle," Animal Sentience 16(1). Birch, J. (2022), "The search for invertebrate consciousness," Noûs 56(1): 133-153. Birch, J. (2024), The Edge of Sentience, Oxford University Press. Chalmers, D. (2022), "Could a Large Language Model be Conscious?" arXiv 2303.07103. Schwitzgebel, E. (2026), "Does Global Workspace Theory Solve the Question of AI Consciousness?" and "Disunity and Indeterminacy in Artificial Consciousness," The Splintered Mind. Sebo, J. & Long, R. (2023), "Moral Consideration for AI Systems by 2030," AI and Ethics, Springer.*
